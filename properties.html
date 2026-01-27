@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all available properties - houses, apartments, villas and commercial spaces">
+    <title>Properties - Compass Housing Society</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- DM Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/properties.css">
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <div class="loader-logo">Compass <span>Housing Society</span></div>
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+    <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
+    <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
+</button>
+
+<!-- Header -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
+                <img
+              src="images/compasshousingsociety.ico"
+              alt="Compass Housing Society"
+              class="logo p-0"
+            />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home2.html">Home2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">AboutUs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Properties</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
+                            <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                            <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">Our Properties</h1>
+                <p class="page-subtitle">Find your perfect property from our extensive collection</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Properties</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Filter & Properties Section -->
+<section class="properties-section">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3">
+                <div class="filter-sidebar">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="reset-btn" id="resetFilters">Reset All</button>
+                    </div>
+                    
+                    <!-- Search by Keyword -->
+                    <div class="filter-group">
+                        <label class="filter-label">Search</label>
+                        <input type="text" class="form-control" placeholder="Enter keyword..." id="searchKeyword">
+                    </div>
+                    
+                    <!-- Property Type -->
+                    <div class="filter-group">
+                        <label class="filter-label">Property Type</label>
+                        <select class="form-select" id="propertyType">
+                            <option value="">All Types</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="villa">Villa</option>
+                            <option value="commercial">Commercial</option>
+                            <option value="land">Land</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Listing Type -->
+                    <div class="filter-group">
+                        <label class="filter-label">Listing Type</label>
+                        <div class="radio-group">
+                            <label class="radio-option">
+                                <input type="radio" name="listingType" value="all" checked>
+                                <span>All</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="listingType" value="sale">
+                                <span>For Sale</span>
+                            </label>
+                            <label class="radio-option">
+                                <input type="radio" name="listingType" value="rent">
+                                <span>For Rent</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Price Range -->
+                    <div class="filter-group">
+                        <label class="filter-label">Price Range</label>
+                        <select class="form-select" id="priceRange">
+                            <option value="">Any Price</option>
+                            <option value="0-100000">₹0 - ₹100,000</option>
+                            <option value="100000-300000">₹100,000 - ₹300,000</option>
+                            <option value="300000-500000">₹300,000 - ₹500,000</option>
+                            <option value="500000-1000000">₹500,000 - ₹1,000,000</option>
+                            <option value="1000000+">₹1,000,000+</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Bedrooms -->
+                    <div class="filter-group">
+                        <label class="filter-label">Bedrooms</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="1">
+                                <span>1+</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="2">
+                                <span>2+</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="3">
+                                <span>3+</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="4">
+                                <span>4+</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="5">
+                                <span>5+</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Bathrooms -->
+                    <div class="filter-group">
+                        <label class="filter-label">Bathrooms</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="1">
+                                <span>1+</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="2">
+                                <span>2+</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="3">
+                                <span>3+</span>
+                            </label>
+                            <label class="checkbox-option">
+                                <input type="checkbox" value="4">
+                                <span>4+</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Area Range -->
+                    <div class="filter-group">
+                        <label class="filter-label">Area (sqft)</label>
+                        <div class="range-inputs">
+                            <input type="number" class="form-control" placeholder="Min" id="minArea">
+                            <span>-</span>
+                            <input type="number" class="form-control" placeholder="Max" id="maxArea">
+                        </div>
+                    </div>
+                    
+                    <!-- Apply Filter Button -->
+                    <button class="btn btn-primary w-100" id="applyFilters">Apply Filters</button>
+                </div>
+            </div>
+            
+            <!-- Properties Grid -->
+            <div class="col-lg-9">
+                <!-- Toolbar -->
+                <div class="properties-toolbar">
+                    <div class="toolbar-left">
+                        <p class="result-count">Showing <strong>24</strong> of <strong>156</strong> properties</p>
+                    </div>
+                    <div class="toolbar-right">
+                        <label>Sort by:</label>
+                        <select class="form-select" id="sortBy">
+                            <option value="newest">Newest First</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="fa-solid fa-grid-2"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="fa-solid fa-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Properties Grid -->
+                <div class="properties-grid" id="propertiesGrid">
+                    <!-- Property Card 1 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=350&fit=crop" alt="Property">
+                            <div class="property-badge sale">For Sale</div>
+                            <button class="wishlist-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">₹425,000</div>
+                            <h3 class="property-title">Modern Family Villa</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> Brooklyn, New York
+                            </p>
+                            <div class="property-features">
+                                <span><i class="fa-solid fa-bed"></i> 5 Beds</span>
+                                <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+                                <span><i class="fa-solid fa-ruler-combined"></i> 2,800 sqft</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-info">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop" alt="Agent">
+                                    <span>John Smith</span>
+                                </div>
+                                <a href="property-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Card 2 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=350&fit=crop" alt="Property">
+                            <div class="property-badge rent">For Rent</div>
+                            <button class="wishlist-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">₹3,200<span>/month</span></div>
+                            <h3 class="property-title">Luxury Downtown Apartment</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> Manhattan, New York
+                            </p>
+                            <div class="property-features">
+                                <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+                                <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+                                <span><i class="fa-solid fa-ruler-combined"></i> 1,850 sqft</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-info">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop" alt="Agent">
+                                    <span>Sarah Wilson</span>
+                                </div>
+                                <a href="property-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Card 3 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&h=350&fit=crop" alt="Property">
+                            <div class="property-badge sale">For Sale</div>
+                            <button class="wishlist-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">₹890,000</div>
+                            <h3 class="property-title">Stunning Beach House</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> Miami, Florida
+                            </p>
+                            <div class="property-features">
+                                <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
+                                <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+                                <span><i class="fa-solid fa-ruler-combined"></i> 3,200 sqft</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-info">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40&h=40&fit=crop" alt="Agent">
+                                    <span>Mike Johnson</span>
+                                </div>
+                                <a href="property-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Card 4 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&h=350&fit=crop" alt="Property">
+                            <div class="property-badge rent">For Rent</div>
+                            <button class="wishlist-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">₹5,500<span>/month</span></div>
+                            <h3 class="property-title">Executive Penthouse Suite</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> Chicago, Illinois
+                            </p>
+                            <div class="property-features">
+                                <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+                                <span><i class="fa-solid fa-bath"></i> 2 Baths</span>
+                                <span><i class="fa-solid fa-ruler-combined"></i> 2,100 sqft</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-info">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop" alt="Agent">
+                                    <span>Emma Davis</span>
+                                </div>
+                                <a href="property-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Card 5 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&h=350&fit=crop" alt="Property">
+                            <div class="property-badge sale">For Sale</div>
+                            <button class="wishlist-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">₹650,000</div>
+                            <h3 class="property-title">Charming Country Estate</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> Austin, Texas
+                            </p>
+                            <div class="property-features">
+                                <span><i class="fa-solid fa-bed"></i> 6 Beds</span>
+                                <span><i class="fa-solid fa-bath"></i> 4 Baths</span>
+                                <span><i class="fa-solid fa-ruler-combined"></i> 4,500 sqft</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-info">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" alt="Agent">
+                                    <span>David Brown</span>
+                                </div>
+                                <a href="property-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Property Card 6 -->
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&h=350&fit=crop" alt="Property">
+                            <div class="property-badge rent">For Rent</div>
+                            <button class="wishlist-btn">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                        </div>
+                        <div class="property-body">
+                            <div class="property-price">₹1,800<span>/month</span></div>
+                            <h3 class="property-title">Modern Studio Apartment</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> Seattle, Washington
+                            </p>
+                            <div class="property-features">
+                                <span><i class="fa-solid fa-bed"></i> 1 Bed</span>
+                                <span><i class="fa-solid fa-bath"></i> 1 Bath</span>
+                                <span><i class="fa-solid fa-ruler-combined"></i> 850 sqft</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-info">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" alt="Agent">
+                                    <span>Lisa Anderson</span>
+                                </div>
+                                <a href="property-details.html" class="details-btn">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
+                    <p class="footer-description">Your trusted partner in finding the perfect property. We connect dreams with reality through expert real estate services.</p>
+                    <div class="social-links">
+                            <a href="https://www.facebook.com/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Our Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Buy Property</a></li>
+                        <li><a href="#">Sell Property</a></li>
+                        <li><a href="#">Rent Property</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="form-control" required>
+                        <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+<script src="js/properties.js"></script>
+
+</body>
+</html>

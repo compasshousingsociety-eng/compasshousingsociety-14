@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all available properties - houses, apartments, villas and commercial spaces">
+    <title>Properties - Compass Housing Society</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- DM Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about-contact.css">
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <div class="loader-logo">Compass <span>Housing Society</span></div>
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+    <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
+    <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
+</button>
+
+<!-- Header -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
+                <img
+              src="images/compasshousingsociety.ico"
+              alt="Compass Housing Society"
+              class="logo p-0"
+            />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home2.html">Home2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">AboutUs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Properties</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
+                            <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                            <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">About Us</h1>
+                <p class="page-subtitle">Learn more about compasshousingsociety and our mission</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">About Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-content-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=700&fit=crop" alt="About" class="main-about-img">
+                    <div class="experience-box">
+                        <h3>15+</h3>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&h=350&fit=crop" alt="About" class="side-about-img">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <span class="section-badge">About compasshousingsociety</span>
+                    <h2 class="section-title">We Help You Find Your Dream Property</h2>
+                    <p class="about-text">Since 2009, compasshousingsociety has been helping thousands of families find their perfect homes. We believe that finding the right property should be an exciting journey, not a stressful ordeal.</p>
+                    <p class="about-text">Our team of experienced real estate professionals is dedicated to providing personalized service, expert market knowledge, and innovative solutions to meet all your property needs.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <i class="fa-solid fa-building"></i>
+                            <div>
+                                <h4>2,500+</h4>
+                                <p>Properties Sold</p>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fa-solid fa-users"></i>
+                            <div>
+                                <h4>1,200+</h4>
+                                <p>Happy Clients</p>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fa-solid fa-award"></i>
+                            <div>
+                                <h4>25+</h4>
+                                <p>Awards Won</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission & Vision -->
+<section class="mission-vision-section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="mission-box">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To provide exceptional real estate services by connecting people with properties that transform their lives. We strive to make the buying, selling, and renting process transparent, efficient, and enjoyable for everyone.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mission-box">
+                    <div class="mission-icon">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the most trusted and innovative real estate platform, setting new standards in customer service and property excellence. We envision a future where finding your dream property is simple, transparent, and accessible to all.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Our Values</span>
+            <h2 class="section-title">What We Stand For</h2>
+            <p class="section-description">Our core values guide everything we do</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h4>Integrity</h4>
+                    <p>We conduct business with honesty and transparency in every transaction</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p>We strive for excellence in service and property quality</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h4>Innovation</h4>
+                    <p>We embrace technology to improve the real estate experience</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h4>Client Focus</h4>
+                    <p>Your satisfaction and success are our top priorities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <div class="container">
+        <div class="section-header text-center">
+            <span class="section-badge">Our Team</span>
+            <h2 class="section-title">Meet Our Expert Agents</h2>
+            <p class="section-description">Professional and dedicated real estate experts</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&h=300&fit=crop" alt="Agent">
+                        <div class="team-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>John Smith</h4>
+                        <p>Senior Agent</p>
+                        <span class="team-contact">john@compasshousingsociety.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop" alt="Agent">
+                        <div class="team-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Sarah Wilson</h4>
+                        <p>Property Consultant</p>
+                        <span class="team-contact">sarah@compasshousingsociety.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=300&fit=crop" alt="Agent">
+                        <div class="team-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Mike Johnson</h4>
+                        <p>Real Estate Broker</p>
+                        <span class="team-contact">mike@compasshousingsociety.com</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop" alt="Agent">
+                        <div class="team-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h4>Emma Davis</h4>
+                        <p>Marketing Director</p>
+                        <span class="team-contact">emma@compasshousingsociety.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="cta-title">Ready to Work With Us?</h2>
+                    <p class="cta-text">Let our experts help you find the perfect property today</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
+                    <p class="footer-description">Your trusted partner in finding the perfect property. We connect dreams with reality through expert real estate services.</p>
+                    <div class="social-links">
+                            <a href="https://www.facebook.com/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Our Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Buy Property</a></li>
+                        <li><a href="#">Sell Property</a></li>
+                        <li><a href="#">Rent Property</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="form-control" required>
+                        <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+<script src="js/properties.js"></script>
+
+</body>
+</html>

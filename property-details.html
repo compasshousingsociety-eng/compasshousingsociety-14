@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all available properties - houses, apartments, villas and commercial spaces">
+    <title>Properties - Compass Housing Society</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- DM Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/property-details.css">
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <div class="loader-logo">Compass <span>Housing Society</span></div>
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+    <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
+    <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
+</button>
+
+<!-- Header -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
+                <img
+              src="images/compasshousingsociety.ico"
+              alt="Compass Housing Society"
+              class="logo p-0"
+            />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home2.html">Home2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">AboutUs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Properties</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
+                            <li><a class="dropdown-item active" href="property-details.html">Property Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                            <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Breadcrumb -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="properties.html">Properties</a></li>
+                <li class="breadcrumb-item active">Modern Family Villa</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Property Gallery -->
+<!-- <section class="property-gallery">
+    <div class="container">
+        <div class="row g-3">
+            <div class="col-lg-8">
+                <div class="main-image">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=700&fit=crop" alt="Property Main" id="mainImage">
+                    <button class="fullscreen-btn">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="thumbnail-grid">
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop" alt="Thumbnail" onclick="changeImage(this.src)">
+                    </div>
+                    <div class="thumbnail more-photos">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop" alt="Thumbnail">
+                        <div class="overlay">
+                            <i class="fa-solid fa-images"></i>
+                            <span>+15 Photos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Property Details -->
+<section class="property-details-section">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Header -->
+                <div class="property-header">
+                    <div class="header-top">
+                        <div>
+                            <h1 class="property-name">Modern Family Villa</h1>
+                            <p class="property-address">
+                                <i class="fa-solid fa-location-dot"></i> 2148 Brooklyn Avenue, New York, USA
+                            </p>
+                        </div>
+                        <div class="property-price">₹425,000</div>
+                    </div>
+                    
+                    <!-- Quick Stats -->
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <div>
+                                <span class="label">Bedrooms</span>
+                                <span class="value">5</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-bath"></i>
+                            <div>
+                                <span class="label">Bathrooms</span>
+                                <span class="value">3</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-ruler-combined"></i>
+                            <div>
+                                <span class="label">Area</span>
+                                <span class="value">2,800 sqft</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa-solid fa-car"></i>
+                            <div>
+                                <span class="label">Garage</span>
+                                <span class="value">2 Cars</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="content-block">
+                    <h2 class="block-title">Description</h2>
+                    <p>This stunning modern family villa offers the perfect blend of luxury and comfort. Located in a prime Brooklyn neighborhood, this property features spacious rooms, contemporary design, and high-end finishes throughout.</p>
+                    <p>The open-concept living area seamlessly connects to the gourmet kitchen, creating an ideal space for family gatherings and entertaining. Large windows flood the home with natural light and offer beautiful views of the surrounding area.</p>
+                    <p>The master suite is a true retreat, complete with a walk-in closet and spa-like bathroom featuring dual vanities and a soaking tub. Four additional bedrooms provide plenty of space for family and guests.</p>
+                </div>
+
+                <!-- Features -->
+                <div class="content-block">
+                    <h2 class="block-title">Features & Amenities</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="features-list">
+                                <li><i class="fa-solid fa-check"></i> Air Conditioning</li>
+                                <li><i class="fa-solid fa-check"></i> Hardwood Floors</li>
+                                <li><i class="fa-solid fa-check"></i> Walk-in Closets</li>
+                                <li><i class="fa-solid fa-check"></i> Modern Kitchen</li>
+                                <li><i class="fa-solid fa-check"></i> Stainless Appliances</li>
+                                <li><i class="fa-solid fa-check"></i> Granite Countertops</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="features-list">
+                                <li><i class="fa-solid fa-check"></i> Landscaped Yard</li>
+                                <li><i class="fa-solid fa-check"></i> Patio Area</li>
+                                <li><i class="fa-solid fa-check"></i> Security System</li>
+                                <li><i class="fa-solid fa-check"></i> Energy Efficient</li>
+                                <li><i class="fa-solid fa-check"></i> Garage Parking</li>
+                                <li><i class="fa-solid fa-check"></i> Near Schools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Info -->
+                <div class="content-block">
+                    <h2 class="block-title">Property Information</h2>
+                    <div class="info-table">
+                        <div class="info-row">
+                            <div class="info-label">Property ID:</div>
+                            <div class="info-value">GE-2026-001</div>
+                            <div class="info-label">Type:</div>
+                            <div class="info-value">Residential</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Year Built:</div>
+                            <div class="info-value">2020</div>
+                            <div class="info-label">Lot Size:</div>
+                            <div class="info-value">5,000 sqft</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Stories:</div>
+                            <div class="info-value">2</div>
+                            <div class="info-label">Parking:</div>
+                            <div class="info-value">2 Car Garage</div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-label">Status:</div>
+                            <div class="info-value"><span class="badge-available">Available</span></div>
+                            <div class="info-label">Posted:</div>
+                            <div class="info-value">Jan 15, 2026</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="content-block">
+                    <h2 class="block-title">Location</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.9503509410423!2d-73.9856644!3d40.6782477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25bb0e0d87f27%3A0xc889234bc07c42ee!2sBrooklyn%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Agent Card -->
+                <div class="sidebar-card">
+                    <h3 class="card-title">Contact Agent</h3>
+                    <div class="agent-profile">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" alt="Agent">
+                        <div>
+                            <h4>John Smith</h4>
+                            <p>Real Estate Agent</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <a href="tel:+1234567890" class="contact-link">
+                            <i class="fa-solid fa-phone"></i> +1 234 567 890
+                        </a>
+                        <a href="mailto:john@Compass Housing Society.com" class="contact-link">
+                            <i class="fa-solid fa-envelope"></i> john@Compass Housing Society.com
+                        </a>
+                    </div>
+                    <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#inquiryModal">
+                        Send Message
+                    </button>
+                </div>
+
+                <!-- Calculator -->
+                <div class="sidebar-card">
+                    <h3 class="card-title">Mortgage Calculator</h3>
+                    <form id="mortgageForm">
+                        <div class="form-group">
+                            <label>Loan Amount</label>
+                            <input type="number" class="form-control" value="425000" id="loanAmount">
+                        </div>
+                        <div class="form-group">
+                            <label>Interest Rate (%)</label>
+                            <input type="number" class="form-control" value="6.5" step="0.1" id="interestRate">
+                        </div>
+                        <div class="form-group">
+                            <label>Loan Period (Years)</label>
+                            <input type="number" class="form-control" value="30" id="loanPeriod">
+                        </div>
+                        <button type="button" class="btn btn-secondary w-100" onclick="calculateMortgage()">Calculate</button>
+                        <div class="result-box" id="result" style="display: none;">
+                            <p>Monthly Payment:</p>
+                            <h3 id="monthlyPayment">₹0</h3>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Share -->
+                <div class="sidebar-card">
+                    <h3 class="card-title">Share Property</h3>
+                    <div class="share-buttons">
+                        <button class="share-btn facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </button>
+                        <button class="share-btn twitter">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                        <button class="share-btn linkedin">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </button>
+                        <button class="share-btn whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Similar Properties -->
+                <div class="sidebar-card">
+                    <h3 class="card-title">Similar Properties</h3>
+                    <div class="similar-list">
+                        <a href="#" class="similar-item">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=150&h=100&fit=crop" alt="Property">
+                            <div>
+                                <h5>Modern Apartment</h5>
+                                <p class="price">₹280,000</p>
+                                <p class="location">Brooklyn, NY</p>
+                            </div>
+                        </a>
+                        <a href="#" class="similar-item">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=150&h=100&fit=crop" alt="Property">
+                            <div>
+                                <h5>Family House</h5>
+                                <p class="price">₹420,000</p>
+                                <p class="location">Manhattan, NY</p>
+                            </div>
+                        </a>
+                        <a href="#" class="similar-item">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=150&h=100&fit=crop" alt="Property">
+                            <div>
+                                <h5>Luxury Villa</h5>
+                                <p class="price">₹550,000</p>
+                                <p class="location">Queens, NY</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Inquiry Modal -->
+<div class="modal fade" id="inquiryModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Send Inquiry</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" class="form-control" placeholder="Your phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="form-control" rows="4" placeholder="I'm interested in this property..." required></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary" form="inquiryForm">Send Message</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
+                    <p class="footer-description">Your trusted partner in finding the perfect property. We connect dreams with reality through expert real estate services.</p>
+                    <div class="social-links">
+                            <a href="https://www.facebook.com/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Our Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Buy Property</a></li>
+                        <li><a href="#">Sell Property</a></li>
+                        <li><a href="#">Rent Property</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="form-control" required>
+                        <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+<script src="js/properties.js"></script>
+
+</body>
+</html>

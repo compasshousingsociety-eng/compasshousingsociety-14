@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Browse all available properties - houses, apartments, villas and commercial spaces">
+    <title>Properties - Compass Housing Society</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- DM Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/form-validation.css">
+</head>
+
+<body>
+
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">Compass <span>Housing Society</span></div>
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+        <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
+        <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
+    </button>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
+                <img
+              src="images/compasshousingsociety.ico"
+              alt="Compass Housing Society"
+              class="logo p-0"
+            />
+            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home2.html">Home2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">AboutUs</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                data-bs-toggle="dropdown">Properties</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
+                                <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                                <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="login.html"><i
+                                            class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                                <li><a class="dropdown-item active" href="register.html"><i
+                                            class="fa-solid fa-user-plus me-2"></i>Register</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Register Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="auth-wrapper reverse">
+                        <!-- Left Side - Form -->
+                        <div class="auth-form-container">
+                            <div class="auth-header">
+                                <a href="index.html" class="auth-logo">
+                                    <span class="brand-name">Compass<span class="brand-accent">Housing
+                                            Society</span></span>
+                                </a>
+                                <h1 class="auth-title">Create Account</h1>
+                                <p class="auth-subtitle">Sign up to start your property journey</p>
+                            </div>
+
+                            <!-- Social Register -->
+                            <div class="social-login">
+                                <button class="social-btn google" onclick="
+                        window.location.href =
+                          'https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmyaccount.google.com%2F&dsh=S-419015391%3A1769162241802766&ifkv=AXbMIuAqmmQn_5b0pUx-XlJgxffWeJ7NzlTAn5tBqj8gh30HTKxiSbYvEJJ9AGRngVXceRBssDy8yQ&service=accountsettings&flowName=GlifWebSignIn&flowEntry=ServiceLogin'
+                      ">
+                                    <i class="fa-brands fa-google"></i>
+                                    <span>Sign up with Google</span>
+                                </button>
+                                <button class="social-btn facebook" onclick="
+                        window.location.href =
+                          'https://www.facebook.com/login.php/'
+                      ">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    <span>Sign up with Facebook</span>
+                                </button>
+                            </div>
+
+                            <div class="divider">
+                                <span>or sign up with email</span>
+                            </div>
+
+                            <!-- Register Form -->
+                            <form class="auth-form" id="registerForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="firstName">First Name *</label>
+                                            <div class="input-with-icon">
+                                                <i class="fa-solid fa-user"></i>
+                                                <input type="text" id="firstName" class="form-control"
+                                                    placeholder="First name" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="lastName">Last Name *</label>
+                                            <div class="input-with-icon">
+                                                <i class="fa-solid fa-user"></i>
+                                                <input type="text" id="lastName" class="form-control"
+                                                    placeholder="Last name" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="regEmail">Email Address *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <input type="email" id="regEmail" class="form-control"
+                                            placeholder="Enter your email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-phone"></i>
+                                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone"
+                                            required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="regPassword">Password *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <input type="password" id="regPassword" class="form-control"
+                                            placeholder="Create password" required>
+                                        <button type="button" class="toggle-password"
+                                            onclick="togglePassword('regPassword')">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="password-strength" id="passwordStrength">
+                                        <div class="strength-bar">
+                                            <div class="strength-fill"></div>
+                                        </div>
+                                        <span class="strength-text">Password strength</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                        <input type="password" id="confirmPassword" class="form-control"
+                                            placeholder="Confirm password" required>
+                                        <button type="button" class="toggle-password"
+                                            onclick="togglePassword('confirmPassword')">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="terms" required>
+                                        <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy
+                                                Policy *</a></span>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100 btn-lg">
+                                    Create Account
+                                </button>
+                            </form>
+
+                            <div class="auth-footer">
+                                <p>Already have an account? <a href="login.html">Sign In</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Right Side - Image -->
+                        <div class="auth-image">
+                            <div class="image-overlay">
+                                <div class="overlay-content">
+                                    <h2>Join compasshousingsociety</h2>
+                                    <p>Create your account and unlock exclusive features</p>
+                                    <div class="auth-features">
+                                        <div class="feature">
+                                            <i class="fa-solid fa-check-circle"></i>
+                                            <span>Access to premium listings</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fa-solid fa-check-circle"></i>
+                                            <span>Direct contact with agents</span>
+                                        </div>
+                                        <div class="feature">
+                                            <i class="fa-solid fa-check-circle"></i>
+                                            <span>Property alerts and updates</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=800&fit=crop"
+                                alt="Register">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
+                        <p class="footer-description">Your trusted partner in finding the perfect property. We connect
+                            dreams with reality through expert real estate services.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="properties.html">Properties</a></li>
+                            <li><a href="agents.html">Our Agents</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Buy Property</a></li>
+                            <li><a href="#">Sell Property</a></li>
+                            <li><a href="#">Rent Property</a></li>
+                            <li><a href="#">Consulting</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Newsletter</h4>
+                        <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers
+                        </p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" class="form-control" required>
+                            <button type="submit" class="btn btn-secondary"><i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <!-- Form Validation JS -->
+<script src="js/form-validation.js"></script>
+
+
+</body>
+
+</html>

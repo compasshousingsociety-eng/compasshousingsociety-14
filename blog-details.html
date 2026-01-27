@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all available properties - houses, apartments, villas and commercial spaces">
+    <title>Properties - Compass Housing Society</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- DM Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog-details.css">
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <div class="loader-logo">Compass <span>Housing Society</span></div>
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+    <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
+    <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
+</button>
+
+<!-- Header -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
+                <img
+              src="images/compasshousingsociety.ico"
+              alt="Compass Housing Society"
+              class="logo p-0"
+            />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home2.html">Home2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">AboutUs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Properties</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
+                            <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item active" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                            <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Breadcrumb -->
+<section class="breadcrumb-section">
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+                <li class="breadcrumb-item active">Top 10 Tips for First-Time Home Buyers</li>
+            </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Blog Details Section -->
+<section class="blog-details-section">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <!-- Article -->
+                <article class="blog-article">
+                    <!-- Article Header -->
+                    <div class="article-header">
+                        <div class="article-category">Real Estate</div>
+                        <h1 class="article-title">Top 10 Tips for First-Time Home Buyers in 2026</h1>
+                        <div class="article-meta">
+                            <div class="author-info">
+                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=50&h=50&fit=crop" alt="Author">
+                                <div>
+                                    <span class="author-name">John Smith</span>
+                                    <span class="post-date">January 20, 2026</span>
+                                </div>
+                            </div>
+                            <div class="article-stats">
+                                <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+                                <span><i class="fa-regular fa-eye"></i> 2,450 views</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Featured Image -->
+                    <div class="featured-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&h=600&fit=crop" alt="Blog Post">
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="article-content">
+                        <p class="lead-text">Buying your first home is an exciting milestone, but it can also be overwhelming. With the right preparation and knowledge, you can navigate the process smoothly and make informed decisions that will benefit you for years to come.</p>
+
+                        <p>The real estate market in 2026 presents unique opportunities and challenges for first-time buyers. Whether you're looking at apartments, condos, or single-family homes, understanding the process and preparing yourself financially and mentally is crucial to success.</p>
+
+                        <h2>1. Assess Your Financial Readiness</h2>
+                        <p>Before you start house hunting, take a close look at your finances. Calculate your monthly income, expenses, and savings. Most lenders recommend that your housing costs shouldn't exceed 28% of your gross monthly income.</p>
+
+                        <p>Check your credit score and work on improving it if needed. A higher credit score can help you secure better mortgage rates and terms, potentially saving you thousands of dollars over the life of your loan.</p>
+
+                        <h2>2. Save for a Down Payment</h2>
+                        <p>While the traditional 20% down payment is ideal, many first-time buyer programs allow for much less. However, putting down at least 20% helps you avoid private mortgage insurance (PMI) and reduces your monthly payments.</p>
+
+                        <blockquote class="article-quote">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>The best time to buy a home is when you're financially and emotionally ready, not when the market dictates.</p>
+                            <cite>- Sarah Johnson, Real Estate Expert</cite>
+                        </blockquote>
+
+                        <h2>3. Get Pre-Approved for a Mortgage</h2>
+                        <p>Getting pre-approved shows sellers that you're a serious buyer and gives you a clear idea of how much you can afford. This step involves submitting financial documents to a lender who will then determine how much they're willing to lend you.</p>
+
+                        <h2>4. Choose the Right Location</h2>
+                        <p>Location is one of the most important factors in real estate. Consider proximity to work, schools, public transportation, and amenities. Research the neighborhood's crime rates, future development plans, and property value trends.</p>
+
+                        <div class="info-box">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <div>
+                                <h4>Pro Tip</h4>
+                                <p>Visit the neighborhood at different times of day and on weekends to get a true feel for the area and its residents.</p>
+                            </div>
+                        </div>
+
+                        <h2>5. Work with a Qualified Real Estate Agent</h2>
+                        <p>A good agent can guide you through the entire process, from finding properties to negotiating offers. They have access to listings, market data, and industry connections that can benefit you significantly.</p>
+
+                        <h2>6. Don't Skip the Home Inspection</h2>
+                        <p>A professional home inspection can reveal hidden problems that might cost you thousands later. Never waive the inspection contingency, no matter how competitive the market is.</p>
+
+                        <h2>7. Consider Future Resale Value</h2>
+                        <p>Even if you plan to stay in your home for many years, life circumstances can change. Choose a property that will appeal to future buyers by considering factors like layout, school districts, and neighborhood development.</p>
+
+                        <h2>8. Understand All Costs Involved</h2>
+                        <p>Beyond the down payment and monthly mortgage, factor in closing costs, property taxes, homeowners insurance, HOA fees, maintenance, and utilities. Create a comprehensive budget that accounts for all these expenses.</p>
+
+                        <h2>9. Be Patient and Don't Rush</h2>
+                        <p>Don't feel pressured to make an offer on the first house you see. Take your time to find a home that meets your needs and fits your budget. Remember, this is likely the biggest purchase you'll ever make.</p>
+
+                        <h2>10. Plan for the Unexpected</h2>
+                        <p>Set aside an emergency fund specifically for home repairs and maintenance. Experts recommend saving 1-3% of your home's value annually for upkeep and unexpected repairs.</p>
+
+                        <h3>Final Thoughts</h3>
+                        <p>Buying your first home is a significant achievement that requires careful planning and consideration. By following these tips and working with experienced professionals, you can make the process smoother and find a home that you'll love for years to come.</p>
+
+                        <p>Remember that every buyer's situation is unique, so adapt these guidelines to fit your specific circumstances and always seek professional advice when needed.</p>
+                    </div>
+
+                    <!-- Article Tags -->
+                    <div class="article-tags">
+                        <span class="tags-label">Tags:</span>
+                        <a href="#" class="tag">Home Buying</a>
+                        <a href="#" class="tag">First-Time Buyer</a>
+                        <a href="#" class="tag">Real Estate</a>
+                        <a href="#" class="tag">Tips</a>
+                        <a href="#" class="tag">Mortgage</a>
+                    </div>
+
+                    <!-- Share Section -->
+                    <div class="article-share">
+                        <span class="share-label">Share Article:</span>
+                        <div class="share-buttons">
+                            <button class="share-btn facebook"><i class="fa-brands fa-facebook-f"></i></button>
+                            <button class="share-btn twitter"><i class="fa-brands fa-twitter"></i></button>
+                            <button class="share-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></button>
+                            <button class="share-btn whatsapp"><i class="fa-brands fa-whatsapp"></i></button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Author Bio -->
+                <!-- <div class="author-bio">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop" alt="Author">
+                    <div class="bio-content">
+                        <h4>About John Smith</h4>
+                        <p>John is a licensed real estate agent with over 10 years of experience helping first-time buyers find their dream homes. He specializes in residential properties and is passionate about educating buyers on the home buying process.</p>
+                        <div class="author-social">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Comments Section -->
+                <!-- <div class="comments-section">
+                    <h3 class="section-title">Comments (3)</h3>
+
+                    <div class="comment">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop" alt="User">
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <h5>Emily Johnson</h5>
+                                <span class="comment-date">January 21, 2026</span>
+                            </div>
+                            <p>This article is incredibly helpful! I'm currently saving for my first home and these tips are exactly what I needed. The information about pre-approval was especially useful.</p>
+                            <button class="reply-btn"><i class="fa-solid fa-reply"></i> Reply</button>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop" alt="User">
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <h5>Michael Chen</h5>
+                                <span class="comment-date">January 21, 2026</span>
+                            </div>
+                            <p>Great advice! I wish I had read this before buying my first home. The tip about not skipping the home inspection is so important - it saved me from a costly mistake.</p>
+                            <button class="reply-btn"><i class="fa-solid fa-reply"></i> Reply</button>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=60&h=60&fit=crop" alt="User">
+                        <div class="comment-content">
+                            <div class="comment-header">
+                                <h5>Sarah Williams</h5>
+                                <span class="comment-date">January 22, 2026</span>
+                            </div>
+                            <p>Thank you for sharing these valuable insights. The section about considering future resale value is something I hadn't thought about before. Very comprehensive guide!</p>
+                            <button class="reply-btn"><i class="fa-solid fa-reply"></i> Reply</button>
+                        </div>
+                    </div>
+
+                    <!-- Comment Form -->
+                    <!-- <div class="comment-form">
+                        <h4>Leave a Comment</h4>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Comment" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Post Comment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div> -->
+                <!-- </div> --> 
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Search</h3>
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search articles...">
+                        <button type="submit" class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Recent Posts Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Recent Posts</h3>
+                    <div class="recent-posts">
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>Real Estate Investment Strategies</h5>
+                                <span class="post-date">January 18, 2026</span>
+                            </div>
+                        </a>
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>Modern Interior Design Trends</h5>
+                                <span class="post-date">January 16, 2026</span>
+                            </div>
+                        </a>
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>Housing Market Forecast 2026</h5>
+                                <span class="post-date">January 14, 2026</span>
+                            </div>
+                        </a>
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>How to Choose Perfect Neighborhood</h5>
+                                <span class="post-date">January 12, 2026</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Categories</h3>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">
+                                <span>Real Estate</span>
+                                <span class="count">24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Investment</span>
+                                <span class="count">18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Home Decor</span>
+                                <span class="count">15</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Buying Guide</span>
+                                <span class="count">21</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tags Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Popular Tags</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">Real Estate</a>
+                        <a href="#" class="tag">Investment</a>
+                        <a href="#" class="tag">Home</a>
+                        <a href="#" class="tag">Property</a>
+                        <a href="#" class="tag">Mortgage</a>
+                        <a href="#" class="tag">Interior</a>
+                        <a href="#" class="tag">Buying</a>
+                        <a href="#" class="tag">Tips</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
+                    <p class="footer-description">Your trusted partner in finding the perfect property. We connect dreams with reality through expert real estate services.</p>
+                    <div class="social-links">
+                            <a href="https://www.facebook.com/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Our Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Buy Property</a></li>
+                        <li><a href="#">Sell Property</a></li>
+                        <li><a href="#">Rent Property</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="form-control" required>
+                        <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+<script src="js/properties.js"></script>
+
+</body>
+</html>

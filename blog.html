@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse all available properties - houses, apartments, villas and commercial spaces">
+    <title>Properties - Compass Housing Society</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- DM Sans Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+        <div class="loader-logo">Compass <span>Housing Society</span></div>
+        <div class="loader-spinner"></div>
+        <p class="loader-text">Loading...</p>
+    </div>
+</div>
+
+<!-- Theme Toggle Button -->
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+    <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
+    <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
+</button>
+
+<!-- Header -->
+<header class="main-header">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
+                <img
+              src="images/compasshousingsociety.ico"
+              alt="Compass Housing Society"
+              class="logo p-0"
+            />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home2.html">Home2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">AboutUs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Properties</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
+                            <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                            <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                            <li><a class="dropdown-item" href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="page-title">Our Blog</h1>
+                <p class="page-subtitle">Latest news, tips and insights from the real estate world</p>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active">Blog</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog-section">
+    <div class="container">
+        <div class="row">
+            <!-- Blog Posts -->
+            <div class="col-lg-8">
+                <!-- Featured Post -->
+                <div class="featured-post">
+                    <div class="post-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&h=500&fit=crop" alt="Featured Post">
+                        <div class="post-badge">Featured</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-meta">
+                            <span class="category">Real Estate</span>
+                            <span class="date"><i class="fa-regular fa-calendar"></i> January 20, 2026</span>
+                            <span class="author"><i class="fa-regular fa-user"></i> John Smith</span>
+                        </div>
+                        <h2 class="post-title"><a href="blog-details.html">Top 10 Tips for First-Time Home Buyers in 2026</a></h2>
+                        <p class="post-excerpt">Buying your first home is an exciting milestone, but it can also be overwhelming. Here are essential tips to help you navigate the process and make informed decisions...</p>
+                        <a href="blog-details.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Regular Posts Grid -->
+                <div class="posts-grid">
+                    <!-- Post 1 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Investment</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 18, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Sarah Wilson</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Real Estate Investment Strategies for Beginners</a></h3>
+                            <p class="blog-excerpt">Learn the fundamentals of real estate investing and discover proven strategies to build wealth through property...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Home Decor</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 16, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Mike Johnson</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Modern Interior Design Trends for Your Home</a></h3>
+                            <p class="blog-excerpt">Explore the latest interior design trends that can transform your living space into a modern sanctuary...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Market Trends</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 14, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Emma Davis</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Housing Market Forecast: What to Expect This Year</a></h3>
+                            <p class="blog-excerpt">Get insights into the current housing market trends and predictions for the upcoming months...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Buying Guide</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 12, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> David Brown</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">How to Choose the Perfect Neighborhood</a></h3>
+                            <p class="blog-excerpt">Finding the right neighborhood is just as important as finding the right home. Here's what to consider...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Selling Tips</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 10, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Lisa Anderson</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Preparing Your Home for a Quick Sale</a></h3>
+                            <p class="blog-excerpt">Maximize your home's appeal and sell faster with these expert staging and preparation tips...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Finance</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 8, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Robert Taylor</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Understanding Mortgage Rates and Options</a></h3>
+                            <p class="blog-excerpt">Navigate the world of mortgages with confidence. Learn about different loan types and how to secure the best rates...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 7 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Renovation</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 6, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Jennifer Lee</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Home Renovation Projects That Add Value</a></h3>
+                            <p class="blog-excerpt">Discover which home improvement projects offer the best return on investment for your property...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 8 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Legal</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 4, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Michael Chen</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Essential Legal Documents for Property Buyers</a></h3>
+                            <p class="blog-excerpt">Understand the important legal paperwork involved in purchasing a property to protect your investment...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Post 9 -->
+                    <article class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&h=350&fit=crop" alt="Blog Post">
+                            <div class="blog-category">Lifestyle</div>
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="fa-regular fa-calendar"></i> Jan 2, 2026</span>
+                                <span><i class="fa-regular fa-user"></i> Amanda White</span>
+                            </div>
+                            <h3 class="blog-title"><a href="blog-details.html">Creating a Smart Home on Any Budget</a></h3>
+                            <p class="blog-excerpt">Transform your house into a smart home with affordable technology solutions and automation tips...</p>
+                            <a href="blog-details.html" class="blog-link">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <nav>
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Search Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Search</h3>
+                    <form class="search-form">
+                        <input type="text" class="form-control" placeholder="Search articles...">
+                        <button type="submit" class="search-btn">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Categories</h3>
+                    <ul class="category-list">
+                        <li>
+                            <a href="#">
+                                <span>Real Estate</span>
+                                <span class="count">24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Investment</span>
+                                <span class="count">18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Home Decor</span>
+                                <span class="count">15</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Market Trends</span>
+                                <span class="count">12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Buying Guide</span>
+                                <span class="count">21</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>Finance</span>
+                                <span class="count">16</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Recent Posts Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Recent Posts</h3>
+                    <div class="recent-posts">
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>Top 10 Tips for First-Time Home Buyers</h5>
+                                <span class="post-date">January 20, 2026</span>
+                            </div>
+                        </a>
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>Real Estate Investment Strategies</h5>
+                                <span class="post-date">January 18, 2026</span>
+                            </div>
+                        </a>
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>Modern Interior Design Trends</h5>
+                                <span class="post-date">January 16, 2026</span>
+                            </div>
+                        </a>
+                        <a href="blog-details.html" class="recent-post">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=100&h=80&fit=crop" alt="Post">
+                            <div>
+                                <h5>Housing Market Forecast 2026</h5>
+                                <span class="post-date">January 14, 2026</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tags Widget -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Popular Tags</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">Real Estate</a>
+                        <a href="#" class="tag">Investment</a>
+                        <a href="#" class="tag">Home</a>
+                        <a href="#" class="tag">Property</a>
+                        <a href="#" class="tag">Mortgage</a>
+                        <a href="#" class="tag">Interior</a>
+                        <a href="#" class="tag">Buying</a>
+                        <a href="#" class="tag">Selling</a>
+                        <a href="#" class="tag">Market</a>
+                        <a href="#" class="tag">Finance</a>
+                        <a href="#" class="tag">Tips</a>
+                        <a href="#" class="tag">Guide</a>
+                    </div>
+                </div>
+
+                <!-- Newsletter Widget -->
+                <div class="sidebar-widget newsletter-widget">
+                    <h3 class="widget-title">Newsletter</h3>
+                    <p>Subscribe to get latest blog updates directly in your inbox</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="main-footer">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
+                    <p class="footer-description">Your trusted partner in finding the perfect property. We connect dreams with reality through expert real estate services.</p>
+                    <div class="social-links">
+                            <a href="https://www.facebook.com/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="agents.html">Our Agents</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Buy Property</a></li>
+                        <li><a href="#">Sell Property</a></li>
+                        <li><a href="#">Rent Property</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-widget">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="form-control" required>
+                        <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+<script src="js/properties.js"></script>
+
+</body>
+</html>
