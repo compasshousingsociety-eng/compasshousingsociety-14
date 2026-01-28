@@ -173,58 +173,106 @@
                         <p>Fill out the form below and we'll get back to you within 24 hours</p>
                     </div>
                     
-                    <form class="contact-form" id="contactForm">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Full Name *</label>
-                                    <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" class="form-control" placeholder="Enter your phone" required>
-                                </div>
-                            </div>
-                            
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="subject">Subject *</label>
-                                    <select id="subject" class="form-control" required>
-                                        <option value="">Select a subject</option>
-                                        <option value="general">General Inquiry</option>
-                                        <option value="property">Property Information</option>
-                                        <option value="buying">Buying a Property</option>
-                                        <option value="selling">Selling a Property</option>
-                                        <option value="renting">Renting a Property</option>
-                                        <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label for="message">Message *</label>
-                                    <textarea id="message" class="form-control" rows="6" placeholder="Write your message here..." required></textarea>
-                                </div>
-                            </div>
-                            
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary btn-lg">
-                                    <i class="fa-solid fa-paper-plane"></i> Send Message
-                                </button>
-                            </div>
-                        </div>
-                    </form>
+                    <form class="contact-form" id="contactForm" novalidate>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    class="form-control" 
+                    placeholder="Enter your name" 
+                    required
+                    pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
+                    title="Only letters allowed. No spaces at start or end."
+                >
+                <div class="invalid-feedback">
+                    Only letters allowed (no leading/trailing spaces or special characters).
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    class="form-control" 
+                    placeholder="Enter your email" 
+                    required
+                    pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+                    title="Enter a valid email address with no spaces"
+                >
+                <div class="invalid-feedback">
+                    Please enter a valid email address with no spaces.
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    class="form-control" 
+                    placeholder="Enter your phone" 
+                    required
+                    pattern="^[0-9]{10}$"
+                    title="Enter a valid 10-digit phone number"
+                    maxlength="10"
+                >
+                <div class="invalid-feedback">
+                    Please enter a valid 10-digit phone number.
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <select id="subject" class="form-control" required>
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="property">Property Information</option>
+                    <option value="buying">Buying a Property</option>
+                    <option value="selling">Selling a Property</option>
+                    <option value="renting">Renting a Property</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please select a subject.
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea 
+                    id="message" 
+                    class="form-control" 
+                    rows="6" 
+                    placeholder="Write your message here..." 
+                    required
+                    minlength="10"
+                ></textarea>
+                <div class="invalid-feedback">
+                    Please enter a message (minimum 10 characters).
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+        </div>
+    </div>
+</form>
+
                 </div>
             </div>
             

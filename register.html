@@ -147,93 +147,155 @@
                                 <span>or sign up with email</span>
                             </div>
 
-                            <!-- Register Form -->
-                            <form class="auth-form" id="registerForm">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="firstName">First Name *</label>
-                                            <div class="input-with-icon">
-                                                <i class="fa-solid fa-user"></i>
-                                                <input type="text" id="firstName" class="form-control"
-                                                    placeholder="First name" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="lastName">Last Name *</label>
-                                            <div class="input-with-icon">
-                                                <i class="fa-solid fa-user"></i>
-                                                <input type="text" id="lastName" class="form-control"
-                                                    placeholder="Last name" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <form class="auth-form" id="registerForm" novalidate>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-user"></i>
+                    <input 
+                        type="text" 
+                        id="firstName" 
+                        class="form-control"
+                        placeholder="First name" 
+                        required
+                        pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
+                        title="Only letters allowed. No spaces at start or end."
+                    >
+                </div>
+                <div class="invalid-feedback">
+                    Only letters allowed (no leading/trailing spaces or special characters).
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-user"></i>
+                    <input 
+                        type="text" 
+                        id="lastName" 
+                        class="form-control"
+                        placeholder="Last name" 
+                        required
+                        pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
+                        title="Only letters allowed. No spaces at start or end."
+                    >
+                </div>
+                <div class="invalid-feedback">
+                    Only letters allowed (no leading/trailing spaces or special characters).
+                </div>
+            </div>
+        </div>
+    </div>
 
-                                <div class="form-group">
-                                    <label for="regEmail">Email Address *</label>
-                                    <div class="input-with-icon">
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <input type="email" id="regEmail" class="form-control"
-                                            placeholder="Enter your email" required>
-                                    </div>
-                                </div>
+    <div class="form-group">
+        <label for="regEmail">Email Address *</label>
+        <div class="input-with-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <input 
+                type="email" 
+                id="regEmail" 
+                class="form-control"
+                placeholder="Enter your email" 
+                required
+                pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
+                title="Enter a valid email address with no spaces"
+            >
+        </div>
+        <div class="invalid-feedback">
+            Please enter a valid email address with no spaces.
+        </div>
+    </div>
 
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <div class="input-with-icon">
-                                        <i class="fa-solid fa-phone"></i>
-                                        <input type="tel" id="phone" class="form-control" placeholder="Enter your phone"
-                                            required>
-                                    </div>
-                                </div>
+    <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <div class="input-with-icon">
+            <i class="fa-solid fa-phone"></i>
+            <input 
+                type="tel" 
+                id="phone" 
+                class="form-control" 
+                placeholder="Enter your phone"
+                required
+                pattern="^[0-9]{10}$"
+                title="Enter a valid 10-digit phone number"
+                maxlength="10"
+            >
+        </div>
+        <div class="invalid-feedback">
+            Please enter a valid 10-digit phone number.
+        </div>
+    </div>
 
-                                <div class="form-group">
-                                    <label for="regPassword">Password *</label>
-                                    <div class="input-with-icon">
-                                        <i class="fa-solid fa-lock"></i>
-                                        <input type="password" id="regPassword" class="form-control"
-                                            placeholder="Create password" required>
-                                        <button type="button" class="toggle-password"
-                                            onclick="togglePassword('regPassword')">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                    </div>
-                                    <div class="password-strength" id="passwordStrength">
-                                        <div class="strength-bar">
-                                            <div class="strength-fill"></div>
-                                        </div>
-                                        <span class="strength-text">Password strength</span>
-                                    </div>
-                                </div>
+    <div class="form-group">
+        <label for="regPassword">Password *</label>
+        <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input 
+                type="password" 
+                id="regPassword" 
+                class="form-control"
+                placeholder="Create password" 
+                required
+                minlength="8"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
+                title="Password must be at least 8 characters with uppercase, lowercase, and number"
+            >
+            <button type="button" class="toggle-password"
+                onclick="togglePassword('regPassword')">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+        </div>
+        <div class="password-strength" id="passwordStrength">
+            <div class="strength-bar">
+                <div class="strength-fill"></div>
+            </div>
+            <span class="strength-text">Password strength</span>
+        </div>
+        <div class="invalid-feedback">
+            Password must be at least 8 characters with uppercase, lowercase, and number.
+        </div>
+    </div>
 
-                                <div class="form-group">
-                                    <label for="confirmPassword">Confirm Password *</label>
-                                    <div class="input-with-icon">
-                                        <i class="fa-solid fa-lock"></i>
-                                        <input type="password" id="confirmPassword" class="form-control"
-                                            placeholder="Confirm password" required>
-                                        <button type="button" class="toggle-password"
-                                            onclick="togglePassword('confirmPassword')">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </button>
-                                    </div>
-                                </div>
+    <div class="form-group">
+        <label for="confirmPassword">Confirm Password *</label>
+        <div class="input-with-icon">
+            <i class="fa-solid fa-lock"></i>
+            <input 
+                type="password" 
+                id="confirmPassword" 
+                class="form-control"
+                placeholder="Confirm password" 
+                required
+            >
+            <button type="button" class="toggle-password"
+                onclick="togglePassword('confirmPassword')">
+                <i class="fa-solid fa-eye"></i>
+            </button>
+        </div>
+        <div class="invalid-feedback">
+            Passwords do not match.
+        </div>
+    </div>
 
-                                <div class="form-group">
-                                    <label class="checkbox-label">
-                                        <input type="checkbox" id="terms" required>
-                                        <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy
-                                                Policy *</a></span>
-                                    </label>
-                                </div>
+    <div class="form-group">
+        <label class="checkbox-label">
+            <input type="checkbox" id="terms" required>
+            <span>I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy *</a></span>
+        </label>
+        <div class="invalid-feedback">
+            You must agree to the terms and conditions.
+        </div>
+    </div>
 
-                                <button type="submit" class="btn btn-primary w-100 btn-lg">
-                                    Create Account
-                                </button>
-                            </form>
+    <button type="submit" class="btn btn-primary w-100 btn-lg">
+        Create Account
+    </button>
+</form>
+
 
                             <div class="auth-footer">
                                 <p>Already have an account? <a href="login.html">Sign In</a></p>
@@ -338,8 +400,6 @@
     <!-- Custom JS -->
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
-    <!-- Form Validation JS -->
-<script src="js/form-validation.js"></script>
 
 
 </body>
