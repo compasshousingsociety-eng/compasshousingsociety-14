@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about-contact.css">
     <link rel="stylesheet" href="css/form-validation.css">
+   
 
 </head>
 <body>
@@ -65,10 +66,10 @@
                         <a class="nav-link" href="about.html">AboutUs</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Properties</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
-                            <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -94,7 +95,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                        <a href="contact.html" class="btn btn-success p-2">Get Started</a>
                     </li>
                 </ul>
             </div>
@@ -173,7 +174,7 @@
                         <p>Fill out the form below and we'll get back to you within 24 hours</p>
                     </div>
                     
-                    <form class="contact-form" id="contactForm" novalidate>
+                    <form class="contact-form" id="contactForm">
     <div class="row g-3">
         <div class="col-md-6">
             <div class="form-group">
@@ -197,21 +198,22 @@
             <div class="form-group">
                 <label for="email">Email Address *</label>
                 <input 
-                    type="email" 
-                    id="email" 
-                    class="form-control" 
-                    placeholder="Enter your email" 
-                    required
-                    pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
-                    title="Enter a valid email address with no spaces"
-                >
+    type="email" 
+    id="email" 
+    class="form-control" 
+    placeholder="Enter your email" 
+    required
+    pattern="^[A-Za-z0-9._%+-]+@gmail\.com$"
+    title="Enter a valid Gmail address (example@gmail.com)"
+>
+
                 <div class="invalid-feedback">
                     Please enter a valid email address with no spaces.
                 </div>
             </div>
         </div>
         
-        <div class="col-md-6">
+        <!-- <div class="col-md-6">
             <div class="form-group">
                 <label for="phone">Phone Number *</label>
                 <input 
@@ -228,7 +230,7 @@
                     Please enter a valid 10-digit phone number.
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <div class="col-md-6">
             <div class="form-group">
@@ -266,7 +268,7 @@
         </div>
         
         <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-lg">
+            <button type="submit" class="btn btn-success btn-lg">
                 <i class="fa-solid fa-paper-plane"></i> Send Message
             </button>
         </div>
@@ -358,7 +360,7 @@
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Properties</a></li>
                         <li><a href="agents.html">Our Agents</a></li>
                         <li><a href="about.html">About Us</a></li>
                     </ul>
@@ -400,6 +402,88 @@
 <script src="js/properties.js"></script>
 <!-- Form Validation JS -->
 <script src="js/form-validation.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const contactForm = document.getElementById('contactForm');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const subject = document.getElementById('subject');
+    const message = document.getElementById('message');
+
+    /* =======================
+       NAME – LIVE HANDLING
+    ======================= */
+    name.addEventListener('input', function () {
+        this.value = this.value.replace(/^\s+/, '');       // no leading space
+        this.value = this.value.replace(/[^A-Za-z ]/g, ''); // letters only
+        this.value = this.value.replace(/\s{2,}/g, ' ');   // single space
+    });
+
+    /* =======================
+       EMAIL – NO SPACES
+    ======================= */
+    email.addEventListener('input', function () {
+        this.value = this.value.replace(/\s/g, '');
+    });
+
+    /* =======================
+       MESSAGE – TRIM ONLY
+    ======================= */
+    message.addEventListener('input', function () {
+        if (this.value.startsWith(' ')) {
+            this.value = this.value.trimStart();
+        }
+    });
+
+    /* =======================
+       FORM SUBMIT
+    ======================= */
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
+        const gmailRegex = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
+
+        // Name validation
+        if (!nameRegex.test(name.value)) {
+            name.classList.add('is-invalid');
+            return;
+        } else {
+            name.classList.remove('is-invalid');
+        }
+
+        // Email validation
+        if (!gmailRegex.test(email.value)) {
+            email.classList.add('is-invalid');
+            return;
+        } else {
+            email.classList.remove('is-invalid');
+        }
+
+        // Subject validation
+        if (!subject.value) {
+            subject.classList.add('is-invalid');
+            return;
+        } else {
+            subject.classList.remove('is-invalid');
+        }
+
+        // Message validation
+        if (message.value.trim().length < 10) {
+            message.classList.add('is-invalid');
+            return;
+        } else {
+            message.classList.remove('is-invalid');
+        }
+
+        // SUCCESS
+        alert('Message sent successfully ✉️');
+        contactForm.reset();
+    });
+
+});
+</script>
 
 
 </body>

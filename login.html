@@ -64,12 +64,12 @@
                             <a class="nav-link" href="about.html">AboutUs</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Properties</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
-                                <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
-                            </ul>
-                        </li>
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
+                        </ul>
+                    </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
                             <ul class="dropdown-menu">
@@ -95,7 +95,7 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                            <a href="contact.html" class="btn btn-success p-2">Get Started</a>
                         </li>
                     </ul>
                 </div>
@@ -214,7 +214,7 @@
         <a href="#" class="forgot-link">Forgot Password?</a>
     </div>
 
-    <button type="submit" class="btn btn-primary w-100 btn-lg">
+    <button type="submit" class="btn btn-success w-100 btn-lg">
         Sign In
     </button>
 </form>
@@ -259,7 +259,7 @@
                         <h4 class="footer-title">Quick Links</h4>
                         <ul class="footer-links">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="properties.html">Properties</a></li>
+                            <li><a href="services.html">Properties</a></li>
                             <li><a href="agents.html">Our Agents</a></li>
                             <li><a href="about.html">About Us</a></li>
                         </ul>
@@ -301,6 +301,64 @@
     <!-- Custom JS -->
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/form-validation.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const loginForm = document.getElementById('loginForm');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+    /* =======================
+       EMAIL – NO SPACES
+    ======================= */
+    email.addEventListener('input', function () {
+        this.value = this.value.replace(/\s/g, '');
+    });
+
+    /* =======================
+       PASSWORD – NO SPACES
+    ======================= */
+    password.addEventListener('input', function () {
+        this.value = this.value.replace(/\s/g, '');
+    });
+
+    /* =======================
+       FORM SUBMIT
+    ======================= */
+    loginForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const gmailRegex = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
+
+        // Final validation
+        if (!gmailRegex.test(email.value)) {
+            email.classList.add('is-invalid');
+            return;
+        } else {
+            email.classList.remove('is-invalid');
+        }
+
+        if (password.value.length < 6) {
+            password.classList.add('is-invalid');
+            return;
+        } else {
+            password.classList.remove('is-invalid');
+        }
+
+        // OPTIONAL: Remember me
+        if (document.getElementById('remember').checked) {
+            localStorage.setItem('rememberedEmail', email.value);
+        }
+
+        // SUCCESS (simple version)
+        alert('Login successful 🎉');
+        window.location.href = 'index.html';
+    });
+
+});
+</script>
+
 
 
 </body>

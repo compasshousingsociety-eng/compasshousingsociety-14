@@ -18,6 +18,20 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/blog.css">
+    <style>
+        .blog-card.fadeIn {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    </style>
 </head>
 <body>
 
@@ -63,10 +77,10 @@
                         <a class="nav-link" href="about.html">AboutUs</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Properties</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="properties.html">All Properties</a></li>
-                            <li><a class="dropdown-item" href="property-details.html">Property Details</a></li>
+                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -92,7 +106,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="contact.html" class="btn btn-primary p-2">Get Started</a>
+                        <a href="contact.html" class="btn btn-success p-2">Get Started</a>
                     </li>
                 </ul>
             </div>
@@ -321,12 +335,12 @@
             <div class="col-lg-4">
                 <!-- Search Widget -->
                 <div class="sidebar-widget">
-                    <h3 class="widget-title">Search</h3>
-                    <form class="search-form">
+                    <h3 class="widget-title">Search Blogs</h3>
+                    <form class="blog-search-form">
                         <input type="text" class="form-control" placeholder="Search articles...">
-                        <button type="submit" class="search-btn">
+                        <!-- <button type="submit" class="search-btn">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
+                        </button> -->
                     </form>
                 </div>
 
@@ -433,7 +447,7 @@
                     <p>Subscribe to get latest blog updates directly in your inbox</p>
                     <form class="newsletter-form">
                         <input type="email" class="form-control" placeholder="Your email address" required>
-                        <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        <button type="submit" class="btn btn-success w-100">Subscribe</button>
                     </form>
                 </div> -->
             </div>
@@ -463,7 +477,7 @@
                     <h4 class="footer-title">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="properties.html">Properties</a></li>
+                        <li><a href="services.html">Properties</a></li>
                         <li><a href="agents.html">Our Agents</a></li>
                         <li><a href="about.html">About Us</a></li>
                     </ul>
@@ -503,6 +517,81 @@
 <!-- Custom JS -->
 <script src="js/main.js"></script>
 <script src="js/properties.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const searchForm = document.querySelector('.blog-search-form');
+    const searchInput = searchForm.querySelector('input[type="text"]');
+    const blogCards = document.querySelectorAll('.blog-card');
+    const featuredPost = document.querySelector('.featured-post');
+    const noResultsMsg = document.createElement('div');
+    
+    noResultsMsg.className = 'alert alert-info text-center mt-4';
+    noResultsMsg.innerHTML = '<i class="fa-solid fa-circle-info me-2"></i>No articles found matching your search.';
+    noResultsMsg.style.display = 'none';
+    
+    // Insert no results message after posts grid
+    document.querySelector('.posts-grid').parentElement.insertBefore(noResultsMsg, document.querySelector('.posts-grid').nextSibling);
+    
+    // Handle form submission
+    searchForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        performSearch();
+    });
+    
+    // Handle input on keyup for real-time search
+    searchInput.addEventListener('keyup', function() {
+        performSearch();
+    });
+    
+    function performSearch() {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+        
+        // Validate input
+        if (searchTerm === '') {
+            showAllCards();
+            noResultsMsg.style.display = 'none';
+            return;
+        }
+        
+        if (searchTerm.length < 2) {
+            showAllCards();
+            noResultsMsg.style.display = 'none';
+            return;
+        }
+        
+        // Filter blog cards
+        blogCards.forEach(card => {
+            const title = card.querySelector('.blog-title a').textContent.toLowerCase();
+            const excerpt = card.querySelector('.blog-excerpt').textContent.toLowerCase();
+            const category = card.querySelector('.blog-category').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || excerpt.includes(searchTerm) || category.includes(searchTerm)) {
+                card.style.display = 'block';
+                card.classList.add('fadeIn');
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+                card.classList.remove('fadeIn');
+            }
+        });
+        
+        // Show/hide no results message
+        if (visibleCount === 0) {
+            noResultsMsg.style.display = 'block';
+        } else {
+            noResultsMsg.style.display = 'none';
+        }
+    }
+    
+    function showAllCards() {
+        blogCards.forEach(card => {
+            card.style.display = 'block';
+            card.classList.add('fadeIn');
+        });
+    }
+});
+</script>
 
 </body>
 </html>

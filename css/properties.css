@@ -121,6 +121,20 @@
     margin-bottom: 10px;
 }
 
+select option {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+}
+select option:checked, select option:hover {
+    background-color: var(--secondary-color) !important; /* Your desired highlight color */
+    color: var(--white) !important; /* Your desired text color for highlighted option */
+}
+select option:checked, select option:hover {
+    box-shadow: 0 0 10px 100px var(--secondary-color) inset !important;
+    color: var(--white) !important;
+}
+
+.filter-group .form-select,
 .filter-group .form-control,
 .filter-group .form-select {
     padding: 10px 14px;
@@ -131,6 +145,7 @@
     font-size: 14px;
 }
 
+.filter-group .form-select,
 .filter-group .form-control:focus,
 .filter-group .form-select:focus {
     outline: none;

@@ -79,25 +79,25 @@ window.addEventListener('scroll', function() {
    DROPDOWN HOVER FOR DESKTOP
    ========================================== */
 
-if (window.innerWidth >= 992) {
-    const dropdowns = document.querySelectorAll('.dropdown');
+// if (window.innerWidth >= 992) {
+//     const dropdowns = document.querySelectorAll('.dropdown');
     
-    dropdowns.forEach(function(dropdown) {
-        dropdown.addEventListener('mouseenter', function() {
-            const menu = this.querySelector('.dropdown-menu');
-            if (menu) {
-                menu.classList.add('show');
-            }
-        });
+//     dropdowns.forEach(function(dropdown) {
+//         dropdown.addEventListener('mouseenter', function() {
+//             const menu = this.querySelector('.dropdown-menu');
+//             if (menu) {
+//                 menu.classList.add('show');
+//             }
+//         });
         
-        dropdown.addEventListener('mouseleave', function() {
-            const menu = this.querySelector('.dropdown-menu');
-            if (menu) {
-                menu.classList.remove('show');
-            }
-        });
-    });
-}
+//         dropdown.addEventListener('mouseleave', function() {
+//             const menu = this.querySelector('.dropdown-menu');
+//             if (menu) {
+//                 menu.classList.remove('show');
+//             }
+//         });
+//     });
+// }
 
 /* ==========================================
    STATISTICS COUNTER ANIMATION
@@ -264,7 +264,7 @@ if (searchForm) {
         });
         
         // In real application, redirect to properties page with search params
-        // window.location.href = `properties.html?location=${location}&type=${propertyType}&price=${priceRange}`;
+        // window.location.href = `services.html?location=${location}&type=${propertyType}&price=${priceRange}`;
         
         showNotification('Searching for properties...');
     });
@@ -342,17 +342,17 @@ window.addEventListener('scroll', function() {
    MOBILE MENU CLOSE ON LINK CLICK
    ========================================== */
 
-const navbarToggler = document.querySelector('.navbar-toggler');
-const navbarCollapse = document.querySelector('.navbar-collapse');
-const navItems = document.querySelectorAll('.nav-link');
+// const navbarToggler = document.querySelector('.navbar-toggler');
+// const navbarCollapse = document.querySelector('.navbar-collapse');
+// const navItems = document.querySelectorAll('.nav-link');
 
-navItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-        if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-            navbarToggler.click();
-        }
-    });
-});
+// navItems.forEach(function(item) {
+//     item.addEventListener('click', function() {
+//         if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+//             navbarToggler.click();
+//         }
+//     });
+// });
 
 /* ==========================================
    CAROUSEL AUTO PLAY CONTROL

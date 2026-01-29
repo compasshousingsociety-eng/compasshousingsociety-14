@@ -6,6 +6,9 @@
     padding: 80px 0;
 }
 
+.cta-section {
+    background: var(--primary-color);
+}
 
 /* About Images */
 .about-images {
@@ -312,6 +315,14 @@
 
 .contact-info-section {
     padding: 80px 0;
+}
+[data-theme="dark"] .contact-info-section p {
+    color: var(--secondary-color);
+
+}
+[data-theme="dark"] .contact-info-section p a {
+    color: var(--secondary-color);
+
 }
 
 .contact-info-card {
