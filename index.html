@@ -1,756 +1,801 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Find your dream property with Compass Housing Society. Premium real estate listings, expert agents, and seamless property search experience.">
+    <meta name="description"
+        content="Find your dream property with Compass Housing Society. Premium real estate listings, expert agents, and seamless property search experience.">
     <meta name="keywords" content="real estate, properties, homes for sale, apartments, houses, commercial properties">
     <title>Compass Housing Society - Find Your Dream Property</title>
     <link rel="icon" href="images/compasshousingsociety.ico" type="image/icon" />
 
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- DM Sans Font -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- Page Loader -->
-<div class="page-loader" id="pageLoader">
-    <div class="loader-content">
-        <div class="loader-logo">Compass <span>Housing Society</span></div>
-        <div class="loader-spinner"></div>
-        <p class="loader-text">Loading...</p>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">Compass <span>Housing Society</span></div>
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Loading...</p>
+        </div>
     </div>
-</div>
 
-<!-- Theme Toggle Button -->
-<button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
-    <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
-    <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
-</button>
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+        <i class="fa-solid fa-moon theme-icon" id="moonIcon"></i>
+        <i class="fa-solid fa-sun theme-icon hidden" id="sunIcon"></i>
+    </button>
 
-<!-- Header -->
-<header class="main-header">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
-                <img
-              src="images/compasshousingsociety.ico"
-              alt="Compass Housing Society"
-              class="logo p-0"
-            />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <!-- <span class="brand-name">Compass <span class="brand-accent">Housing Society</span></span> -->
+                    <img src="images/compasshousingsociety.ico" alt="Compass Housing Society" class="logo p-0" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="home2.html">Home2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">AboutUs</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                                <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="404.html">404 Error</a></li>
+                                <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="login.html"><i
+                                            class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                                <li><a class="dropdown-item" href="register.html"><i
+                                            class="fa-solid fa-user-plus me-2"></i>Register</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="contact.html" class="btn btn-success p-2">Get Started</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero-slider-section">
+        <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-slide"
+                        style="background-image: linear-gradient(rgba(3, 72, 51, 0.7), rgba(3, 72, 51, 0.7)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=1080&fit=crop');">
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Discover Your Perfect Home</h1>
+                                <p class="hero-subtitle">Explore premium properties in prime locations with expert
+                                    guidance</p>
+                                <div class="hero-buttons">
+                                    <a href="services.html" class="btn btn-success btn-lg">Browse Properties</a>
+                                    <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Agent</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-slide"
+                        style="background-image: linear-gradient(rgba(3, 72, 51, 0.7), rgba(3, 72, 51, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop');">
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Luxury Living Awaits</h1>
+                                <p class="hero-subtitle">Experience exceptional homes designed for modern lifestyle</p>
+                                <div class="hero-buttons">
+                                    <a href="services.html" class="btn btn-success btn-lg">View Listings</a>
+                                    <a href="about.html" class="btn btn-outline-light btn-lg">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-slide"
+                        style="background-image: linear-gradient(rgba(3, 72, 51, 0.7), rgba(3, 72, 51, 0.7)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop');">
+                        <div class="container">
+                            <div class="hero-content">
+                                <h1 class="hero-title">Investment Opportunities</h1>
+                                <p class="hero-subtitle">Smart real estate investments with guaranteed returns</p>
+                                <div class="hero-buttons">
+                                    <a href="services.html" class="btn btn-success btn-lg">Invest Now</a>
+                                    <a href="blog.html" class="btn btn-outline-light btn-lg">Read Guides</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home1</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="home2.html">Home2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">AboutUs</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
-                            <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
-                            <li><a class="dropdown-item" href="blog-details.html">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Resources</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="404.html">404 Error</a></li>
-                            <li><a class="dropdown-item" href="page-not-found.html">Page Not Found</a></li>
-                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="login.html"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
-                            <li><a class="dropdown-item" href="register.html"><i class="fa-solid fa-user-plus me-2"></i>Register</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="contact.html" class="btn btn-success p-2">Get Started</a>
-                    </li>
-                </ul>
-            </div>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
-    </nav>
-</header>
 
-<!-- Hero Section with Slider -->
-<section class="hero-slider-section">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-        </div>
-        
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(3, 72, 51, 0.7), rgba(3, 72, 51, 0.7)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=1080&fit=crop');">
-                    <div class="container">
-                        <div class="hero-content">
-                            <h1 class="hero-title">Discover Your Perfect Home</h1>
-                            <p class="hero-subtitle">Explore premium properties in prime locations with expert guidance</p>
-                            <div class="hero-buttons">
-                                <a href="services.html" class="btn btn-success btn-lg">Browse Properties</a>
-                                <a href="contact.html" class="btn btn-outline-light btn-lg">Contact Agent</a>
-                            </div>
+        <!-- Advanced Search Bar -->
+        <div class="search-bar-container">
+            <div class="container">
+                <div class="advanced-search-bar">
+                    <form class="search-form">
+                        <div class="search-field">
+                            <label>Location</label>
+                            <input type="text" placeholder="Enter city or area" class="form-control">
                         </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(3, 72, 51, 0.7), rgba(3, 72, 51, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&h=1080&fit=crop');">
-                    <div class="container">
-                        <div class="hero-content">
-                            <h1 class="hero-title">Luxury Living Awaits</h1>
-                            <p class="hero-subtitle">Experience exceptional homes designed for modern lifestyle</p>
-                            <div class="hero-buttons">
-                                <a href="services.html" class="btn btn-success btn-lg">View Listings</a>
-                                <a href="about.html" class="btn btn-outline-light btn-lg">Learn More</a>
-                            </div>
+                        <div class="search-field">
+                            <label>Property Type</label>
+                            <select class="form-select">
+                                <option>All Types</option>
+                                <option>House</option>
+                                <option>Apartment</option>
+                                <option>Villa</option>
+                                <option>Commercial</option>
+                            </select>
                         </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="hero-slide" style="background-image: linear-gradient(rgba(3, 72, 51, 0.7), rgba(3, 72, 51, 0.7)), url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop');">
-                    <div class="container">
-                        <div class="hero-content">
-                            <h1 class="hero-title">Investment Opportunities</h1>
-                            <p class="hero-subtitle">Smart real estate investments with guaranteed returns</p>
-                            <div class="hero-buttons">
-                                <a href="services.html" class="btn btn-success btn-lg">Invest Now</a>
-                                <a href="blog.html" class="btn btn-outline-light btn-lg">Read Guides</a>
-                            </div>
+                        <div class="search-field">
+                            <label>Price Range</label>
+                            <select class="form-select">
+                                <option>Any Price</option>
+                                <option>₹0 - ₹100k</option>
+                                <option>₹100k - ₹300k</option>
+                                <option>₹300k - ₹500k</option>
+                                <option>₹500k+</option>
+                            </select>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
-    
-    <!-- Advanced Search Bar -->
-    <div class="search-bar-container">
-        <div class="container">
-            <div class="advanced-search-bar">
-                <form class="search-form">
-                    <div class="search-field">
-                        <label>Location</label>
-                        <input type="text" placeholder="Enter city or area" class="form-control">
-                    </div>
-                    <div class="search-field">
-                        <label>Property Type</label>
-                        <select class="form-select">
-                            <option>All Types</option>
-                            <option>House</option>
-                            <option>Apartment</option>
-                            <option>Villa</option>
-                            <option>Commercial</option>
-                        </select>
-                    </div>
-                    <div class="search-field">
-                        <label>Price Range</label>
-                        <select class="form-select">
-                            <option>Any Price</option>
-                            <option>₹0 - ₹100k</option>
-                            <option>₹100k - ₹300k</option>
-                            <option>₹300k - ₹500k</option>
-                            <option>₹500k+</option>
-                        </select>
-                    </div>
-                    <div class="search-button">
-                        <button type="submit" onclick="window.location.href = 'services.html'" class="btn btn-success">
-                            <i class="fa-solid fa-magnifying-glass"></i> Search
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Features Section -->
-<section class="features-section">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3 class="feature-title">Trusted By Thousands</h3>
-                    <p class="feature-description">Over 10,000+ satisfied clients trust us for their property needs</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <h3 class="feature-title">24/7 Support</h3>
-                    <p class="feature-description">Round the clock customer service for all your queries</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-building"></i>
-                    </div>
-                    <h3 class="feature-title">Wide Range</h3>
-                    <p class="feature-description">Extensive portfolio of residential and commercial properties</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="feature-box">
-                    <div class="feature-icon">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                    </div>
-                    <h3 class="feature-title">Best Prices</h3>
-                    <p class="feature-description">Competitive pricing with flexible payment options</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About Preview Section -->
-<section class="about-preview-section">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <div class="about-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=600&fit=crop" alt="About Compass Housing Society" class="about-main-image">
-                    <div class="experience-badge">
-                        <div class="badge-content">
-                            <h3>15+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="about-content">
-                    <span class="section-label">About Us</span>
-                    <h2 class="section-title">We Help You Find Your Dream Property</h2>
-                    <p class="section-text">Compass Housing Society has been a trusted name in real estate for over 15 years. We specialize in connecting people with their perfect homes, whether they're buying, selling, or renting.</p>
-                    <p class="section-text">Our team of experienced professionals provides personalized service, expert market knowledge, and seamless transaction support to ensure your real estate journey is smooth and successful.</p>
-                    <ul class="check-list">
-                        <li><i class="fa-solid fa-circle-check"></i> Expert real estate consultants</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Verified property listings</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Legal documentation support</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Post-purchase assistance</li>
-                    </ul>
-                    <a href="about.html" class="btn btn-success">Learn More About Us</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Featured Properties Section -->
-<section class="featured-properties-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="section-label">Featured Listings</span>
-            <h2 class="section-title">Explore Our Premium Properties</h2>
-            <p class="section-subtitle">Handpicked selection of the finest properties available</p>
-        </div>
-        
-        <div class="row g-4">
-            <!-- Property Card 1 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card-modern">
-                    <div class="property-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=350&fit=crop" alt="Modern Villa">
-                        <div class="property-badge">For Sale</div>
-                        <div class="property-overlay-actions">
-                            <button class="action-icon" title="Add to Wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <button class="action-icon" title="Compare">
-                                <i class="fa-solid fa-code-compare"></i>
+                        <div class="search-button">
+                            <button type="submit" onclick="window.location.href = 'services.html'"
+                                class="btn btn-success">
+                                <i class="fa-solid fa-magnifying-glass"></i> Search
                             </button>
                         </div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-price">₹4,25,000</div>
-                        <h3 class="property-name">Modern Family Villa</h3>
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i> 2148 Brooklyn Ave, California
-                        </p>
-                        <div class="property-meta">
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bed"></i> 5 Beds
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bath"></i> 3 Baths
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-ruler-combined"></i> 2,800 sqft
-                            </span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="agent-mini">
-                                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop" alt="Agent">
-                                <span>John Smith</span>
-                            </div>
-                            <a href="service-details.html" class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Property Card 2 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card-modern">
-                    <div class="property-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=350&fit=crop" alt="Luxury Apartment">
-                        <div class="property-badge featured">Featured</div>
-                        <div class="property-overlay-actions">
-                            <button class="action-icon" title="Add to Wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <button class="action-icon" title="Compare">
-                                <i class="fa-solid fa-code-compare"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-price">₹3,12,000</div>
-                        <h3 class="property-name">Luxury Downtown Apartment</h3>
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i> 567 Park Avenue, New York
-                        </p>
-                        <div class="property-meta">
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bed"></i> 3 Beds
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bath"></i> 2 Baths
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-ruler-combined"></i> 1,850 sqft
-                            </span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="agent-mini">
-                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop" alt="Agent">
-                                <span>Sarah Wilson</span>
-                            </div>
-                            <a href="service-details.html" class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Property Card 3 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card-modern">
-                    <div class="property-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&h=350&fit=crop" alt="Beach House">
-                        <div class="property-badge">For Sale</div>
-                        <div class="property-overlay-actions">
-                            <button class="action-icon" title="Add to Wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <button class="action-icon" title="Compare">
-                                <i class="fa-solid fa-code-compare"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-price">₹8,90,000</div>
-                        <h3 class="property-name">Stunning Beach House</h3>
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i> 789 Ocean Drive, Miami
-                        </p>
-                        <div class="property-meta">
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bed"></i> 4 Beds
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bath"></i> 3 Baths
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-ruler-combined"></i> 3,200 sqft
-                            </span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="agent-mini">
-                                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40&h=40&fit=crop" alt="Agent">
-                                <span>Mike Johnson</span>
-                            </div>
-                            <a href="service-details.html" class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Property Card 4 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card-modern">
-                    <div class="property-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&h=350&fit=crop" alt="Penthouse">
-                        <div class="property-badge">For Rent</div>
-                        <div class="property-overlay-actions">
-                            <button class="action-icon" title="Add to Wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <button class="action-icon" title="Compare">
-                                <i class="fa-solid fa-code-compare"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-price">₹1,55,000</div>
-                        <h3 class="property-name">Executive Penthouse Suite</h3>
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i> 123 Central Plaza, Chicago
-                        </p>
-                        <div class="property-meta">
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bed"></i> 3 Beds
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bath"></i> 2 Baths
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-ruler-combined"></i> 2,100 sqft
-                            </span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="agent-mini">
-                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop" alt="Agent">
-                                <span>Emma Davis</span>
-                            </div>
-                            <a href="service-details.html" class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Property Card 5 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card-modern">
-                    <div class="property-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&h=350&fit=crop" alt="Country House">
-                        <div class="property-badge">For Sale</div>
-                        <div class="property-overlay-actions">
-                            <button class="action-icon" title="Add to Wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <button class="action-icon" title="Compare">
-                                <i class="fa-solid fa-code-compare"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-price">₹6,50,000</div>
-                        <h3 class="property-name">Charming Country Estate</h3>
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i> 456 Countryside Rd, Texas
-                        </p>
-                        <div class="property-meta">
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bed"></i> 6 Beds
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bath"></i> 4 Baths
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-ruler-combined"></i> 4,500 sqft
-                            </span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="agent-mini">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop" alt="Agent">
-                                <span>David Brown</span>
-                            </div>
-                            <a href="service-details.html" class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Property Card 6 -->
-            <div class="col-lg-4 col-md-6">
-                <div class="property-card-modern">
-                    <div class="property-image-wrapper">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&h=350&fit=crop" alt="Studio Apartment">
-                        <div class="property-badge featured">Featured</div>
-                        <div class="property-overlay-actions">
-                            <button class="action-icon" title="Add to Wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </button>
-                            <button class="action-icon" title="Compare">
-                                <i class="fa-solid fa-code-compare"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="property-content">
-                        <div class="property-price">₹1,80,000</div>
-                        <h3 class="property-name">Modern Studio Apartment</h3>
-                        <p class="property-location">
-                            <i class="fa-solid fa-location-dot"></i> 234 Urban Street, Seattle
-                        </p>
-                        <div class="property-meta">
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bed"></i> 1 Bed
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-bath"></i> 1 Bath
-                            </span>
-                            <span class="meta-item">
-                                <i class="fa-solid fa-ruler-combined"></i> 850 sqft
-                            </span>
-                        </div>
-                        <div class="property-footer">
-                            <div class="agent-mini">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop" alt="Agent">
-                                <span>Lisa Anderson</span>
-                            </div>
-                            <a href="service-details.html" class="view-details">View Details <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-5">
-            <a href="services.html" class="btn btn-outline-success btn-lg">View All Properties</a>
-        </div>
-    </div>
-</section>
-
-<!-- Statistics Section -->
-<section class="stats-section">
-    <div class="container">
-        <div class="row text-center g-4">
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-box">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-house-chimney"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="2500">0</h3>
-                    <p class="stat-label">Properties Sold</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-box">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="10000">0</h3>
-                    <p class="stat-label">Happy Clients</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-box">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="45">0</h3>
-                    <p class="stat-label">Awards Won</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <div class="stat-box">
-                    <div class="stat-icon">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <h3 class="stat-number" data-target="120">0</h3>
-                    <p class="stat-label">Expert Agents</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Why Choose Us Section -->
-<section class="why-choose-section">
-    <div class="container">
-        <div class="section-header text-center">
-            <span class="section-label">Why Choose Us</span>
-            <h2 class="section-title">What Makes Us Different</h2>
-            <p class="section-subtitle">Discover the advantages of working with Compass Housing Society</p>
-        </div>
-        
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i class="fa-solid fa-magnifying-glass-chart"></i>
-                    </div>
-                    <h3 class="reason-title">Market Expertise</h3>
-                    <p class="reason-text">Deep understanding of local real estate markets with data-driven insights and trend analysis to help you make informed decisions.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i class="fa-solid fa-handshake"></i>
-                    </div>
-                    <h3 class="reason-title">Personalized Service</h3>
-                    <p class="reason-text">Dedicated agents who understand your unique needs and work tirelessly to find properties that match your exact requirements.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i class="fa-solid fa-file-contract"></i>
-                    </div>
-                    <h3 class="reason-title">Legal Support</h3>
-                    <p class="reason-text">Complete documentation and legal assistance ensuring secure transactions with transparent processes from start to finish.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i class="fa-solid fa-clock"></i>
-                    </div>
-                    <h3 class="reason-title">Quick Processing</h3>
-                    <p class="reason-text">Streamlined procedures and efficient workflows ensure faster property transactions without compromising on quality or safety.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i class="fa-solid fa-dollar-sign"></i>
-                    </div>
-                    <h3 class="reason-title">Best Value</h3>
-                    <p class="reason-text">Competitive pricing and flexible payment options with no hidden charges, ensuring you get the best deal for your investment.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="reason-card">
-                    <div class="reason-icon-wrapper">
-                        <i class="fa-solid fa-life-ring"></i>
-                    </div>
-                    <h3 class="reason-title">Lifetime Support</h3>
-                    <p class="reason-text">Ongoing assistance even after purchase with property management, maintenance recommendations, and market updates.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- CTA Section -->
-<section class="cta-section">
-    <div class="container">
-        <div class="cta-card">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="cta-title">Ready to Find Your Dream Property?</h2>
-                    <p class="cta-text">Let our expert agents guide you through every step of your real estate journey</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="contact.html" class="btn btn-light btn-lg">Get Started Today</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="main-footer">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="footer-widget">
-                    <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
-                    <p class="footer-description">Your trusted partner in finding the perfect property. We connect dreams with reality through expert real estate services.</p>
-                    <div class="social-links">
-                            <a href="https://www.facebook.com/" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
-                            <a href="https://instagram.com" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://linkedin.com" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                        </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-6">
-                <div class="footer-widget">
-                    <h4 class="footer-title">Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Properties</a></li>
-                        <li><a href="agents.html">Our Agents</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-6 col-6">
-                <div class="footer-widget">
-                    <h4 class="footer-title">Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Buy Property</a></li>
-                        <li><a href="#">Sell Property</a></li>
-                        <li><a href="#">Rent Property</a></li>
-                        <li><a href="#">Consulting</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="footer-widget">
-                    <h4 class="footer-title">Newsletter</h4>
-                    <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Your email address" class="form-control" required>
-                        <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-paper-plane"></i></button>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="feature-title">Trusted By Thousands</h3>
+                        <p class="feature-description">Over 10,000+ satisfied clients trust us for their property needs
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">24/7 Support</h3>
+                        <p class="feature-description">Round the clock customer service for all your queries</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 class="feature-title">Wide Range</h3>
+                        <p class="feature-description">Extensive portfolio of residential and commercial properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                        </div>
+                        <h3 class="feature-title">Best Prices</h3>
+                        <p class="feature-description">Competitive pricing with flexible payment options</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</footer>
+    </section>
 
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- About Preview Section -->
+    <section class="about-preview-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&h=600&fit=crop"
+                            alt="About Compass Housing Society" class="about-main-image">
+                        <div class="experience-badge">
+                            <div class="badge-content">
+                                <h3>15+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <span class="section-label">About Us</span>
+                        <h2 class="section-title">We Help You Find Your Dream Property</h2>
+                        <p class="section-text">Compass Housing Society has been a trusted name in real estate for over
+                            15 years. We specialize in connecting people with their perfect homes, whether they're
+                            buying, selling, or renting.</p>
+                        <p class="section-text">Our team of experienced professionals provides personalized service,
+                            expert market knowledge, and seamless transaction support to ensure your real estate journey
+                            is smooth and successful.</p>
+                        <ul class="check-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Expert real estate consultants</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Verified property listings</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Legal documentation support</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Post-purchase assistance</li>
+                        </ul>
+                        <a href="about.html" class="btn btn-success">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Custom JS -->
-<script src="js/main.js"></script>
+    <!-- Featured Properties Section -->
+    <section class="featured-properties-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Featured Listings</span>
+                <h2 class="section-title">Explore Our Premium Properties</h2>
+                <p class="section-subtitle">Handpicked selection of the finest properties available</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Property Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card-modern">
+                        <div class="property-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=350&fit=crop"
+                                alt="Modern Villa">
+                            <div class="property-badge">For Sale</div>
+                            <div class="property-overlay-actions">
+                                <button class="action-icon" title="Add to Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="action-icon" title="Compare">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <div class="property-price">₹4,25,000</div>
+                            <h3 class="property-name">Modern Family Villa</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 2148 Brooklyn Ave, California
+                            </p>
+                            <div class="property-meta">
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bed"></i> 5 Beds
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bath"></i> 3 Baths
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-ruler-combined"></i> 2,800 sqft
+                                </span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-mini">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=40&h=40&fit=crop"
+                                        alt="Agent">
+                                    <span>John Smith</span>
+                                </div>
+                                <a href="service-details.html" class="view-details">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card-modern">
+                        <div class="property-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=350&fit=crop"
+                                alt="Luxury Apartment">
+                            <div class="property-badge featured">Featured</div>
+                            <div class="property-overlay-actions">
+                                <button class="action-icon" title="Add to Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="action-icon" title="Compare">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <div class="property-price">₹3,12,000</div>
+                            <h3 class="property-name">Luxury Downtown Apartment</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 567 Park Avenue, New York
+                            </p>
+                            <div class="property-meta">
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bed"></i> 3 Beds
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bath"></i> 2 Baths
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-ruler-combined"></i> 1,850 sqft
+                                </span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-mini">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=40&h=40&fit=crop"
+                                        alt="Agent">
+                                    <span>Sarah Wilson</span>
+                                </div>
+                                <a href="service-details.html" class="view-details">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card-modern">
+                        <div class="property-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&h=350&fit=crop"
+                                alt="Beach House">
+                            <div class="property-badge">For Sale</div>
+                            <div class="property-overlay-actions">
+                                <button class="action-icon" title="Add to Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="action-icon" title="Compare">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <div class="property-price">₹8,90,000</div>
+                            <h3 class="property-name">Stunning Beach House</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 789 Ocean Drive, Miami
+                            </p>
+                            <div class="property-meta">
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bed"></i> 4 Beds
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bath"></i> 3 Baths
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-ruler-combined"></i> 3,200 sqft
+                                </span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-mini">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=40&h=40&fit=crop"
+                                        alt="Agent">
+                                    <span>Mike Johnson</span>
+                                </div>
+                                <a href="service-details.html" class="view-details">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card-modern">
+                        <div class="property-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&h=350&fit=crop"
+                                alt="Penthouse">
+                            <div class="property-badge">For Rent</div>
+                            <div class="property-overlay-actions">
+                                <button class="action-icon" title="Add to Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="action-icon" title="Compare">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <div class="property-price">₹1,55,000</div>
+                            <h3 class="property-name">Executive Penthouse Suite</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 123 Central Plaza, Chicago
+                            </p>
+                            <div class="property-meta">
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bed"></i> 3 Beds
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bath"></i> 2 Baths
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-ruler-combined"></i> 2,100 sqft
+                                </span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-mini">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=40&h=40&fit=crop"
+                                        alt="Agent">
+                                    <span>Emma Davis</span>
+                                </div>
+                                <a href="service-details.html" class="view-details">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card-modern">
+                        <div class="property-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&h=350&fit=crop"
+                                alt="Country House">
+                            <div class="property-badge">For Sale</div>
+                            <div class="property-overlay-actions">
+                                <button class="action-icon" title="Add to Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="action-icon" title="Compare">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <div class="property-price">₹6,50,000</div>
+                            <h3 class="property-name">Charming Country Estate</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 456 Countryside Rd, Texas
+                            </p>
+                            <div class="property-meta">
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bed"></i> 6 Beds
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bath"></i> 4 Baths
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-ruler-combined"></i> 4,500 sqft
+                                </span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-mini">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop"
+                                        alt="Agent">
+                                    <span>David Brown</span>
+                                </div>
+                                <a href="service-details.html" class="view-details">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Property Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="property-card-modern">
+                        <div class="property-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&h=350&fit=crop"
+                                alt="Studio Apartment">
+                            <div class="property-badge featured">Featured</div>
+                            <div class="property-overlay-actions">
+                                <button class="action-icon" title="Add to Wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </button>
+                                <button class="action-icon" title="Compare">
+                                    <i class="fa-solid fa-code-compare"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="property-content">
+                            <div class="property-price">₹1,80,000</div>
+                            <h3 class="property-name">Modern Studio Apartment</h3>
+                            <p class="property-location">
+                                <i class="fa-solid fa-location-dot"></i> 234 Urban Street, Seattle
+                            </p>
+                            <div class="property-meta">
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bed"></i> 1 Bed
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-bath"></i> 1 Bath
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fa-solid fa-ruler-combined"></i> 850 sqft
+                                </span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="agent-mini">
+                                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop"
+                                        alt="Agent">
+                                    <span>Lisa Anderson</span>
+                                </div>
+                                <a href="service-details.html" class="view-details">View Details <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <a href="services.html" class="btn btn-outline-success btn-lg">View All Properties</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-house-chimney"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="2500">0</h3>
+                        <p class="stat-label">Properties Sold</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="10000">0</h3>
+                        <p class="stat-label">Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="45">0</h3>
+                        <p class="stat-label">Awards Won</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3 class="stat-number" data-target="120">0</h3>
+                        <p class="stat-label">Expert Agents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label">Why Choose Us</span>
+                <h2 class="section-title">What Makes Us Different</h2>
+                <p class="section-subtitle">Discover the advantages of working with Compass Housing Society</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="reason-card">
+                        <div class="reason-icon-wrapper">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="reason-title">Market Expertise</h3>
+                        <p class="reason-text">Deep understanding of local real estate markets with data-driven insights
+                            and trend analysis to help you make informed decisions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="reason-card">
+                        <div class="reason-icon-wrapper">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="reason-title">Personalized Service</h3>
+                        <p class="reason-text">Dedicated agents who understand your unique needs and work tirelessly to
+                            find properties that match your exact requirements.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="reason-card">
+                        <div class="reason-icon-wrapper">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="reason-title">Legal Support</h3>
+                        <p class="reason-text">Complete documentation and legal assistance ensuring secure transactions
+                            with transparent processes from start to finish.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="reason-card">
+                        <div class="reason-icon-wrapper">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h3 class="reason-title">Quick Processing</h3>
+                        <p class="reason-text">Streamlined procedures and efficient workflows ensure faster property
+                            transactions without compromising on quality or safety.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="reason-card">
+                        <div class="reason-icon-wrapper">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="reason-title">Best Value</h3>
+                        <p class="reason-text">Competitive pricing and flexible payment options with no hidden charges,
+                            ensuring you get the best deal for your investment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="reason-card">
+                        <div class="reason-icon-wrapper">
+                            <i class="fa-solid fa-life-ring"></i>
+                        </div>
+                        <h3 class="reason-title">Lifetime Support</h3>
+                        <p class="reason-text">Ongoing assistance even after purchase with property management,
+                            maintenance recommendations, and market updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="cta-title">Ready to Find Your Dream Property?</h2>
+                        <p class="cta-text">Let our expert agents guide you through every step of your real estate
+                            journey</p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end">
+                        <a href="contact.html" class="btn btn-light btn-lg">Get Started Today</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h3 class="footer-brand">Compass <span>Housing Society</span></h3>
+                        <p class="footer-description">Your trusted partner in finding the perfect property. We connect
+                            dreams with reality through expert real estate services.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/" class="social-icon"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="https://x.com" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://instagram.com" class="social-icon"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://linkedin.com" class="social-icon"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="services.html">Properties</a></li>
+                            <li><a href="agents.html">Our Agents</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Services</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Buy Property</a></li>
+                            <li><a href="#">Sell Property</a></li>
+                            <li><a href="#">Rent Property</a></li>
+                            <li><a href="#">Consulting</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-widget">
+                        <h4 class="footer-title">Newsletter</h4>
+                        <p class="footer-newsletter-text">Subscribe to get latest property updates and exclusive offers
+                        </p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address" class="form-control" required>
+                            <button type="submit" class="btn btn-secondary"><i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Compass Housing Society. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
