@@ -4,16 +4,16 @@
 
 /* Blog Details Section */
 .blog-details-section {
-    padding: 50px 0 80px;
+     padding: var(--section-padding);
 }
 
 /* Blog Article */
 .blog-article {
     background-color: var(--card-bg);
     border-radius: var(--radius-lg);
-    padding: 40px;
+     padding: var(--section-padding);
     box-shadow: 0 3px 15px var(--shadow-sm);
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
 }
 
 /* Article Header */

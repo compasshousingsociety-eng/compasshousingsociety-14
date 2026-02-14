@@ -32,20 +32,36 @@ body::before {
    CSS VARIABLES & RESET
    ========================================== */
 
+
+
+
+/* ==========================================
+   CSS VARIABLES & RESET (3-COLOR COMPLIANT)
+   ========================================== */
+
+   /* replaced primary colors with new primary colors*/
+/* ==========================================
+   CSS VARIABLES - MINIMAL DESIGN
+   ========================================== */
+
 :root {
-    /* Colors */
-    --primary-color: #034833;
-    --secondary-color: #83CD20;
+    /* ✅ Core 3-Color Brand Palette */
+    --primary-color: #034833;      /* Dark Green */
+    --secondary-color: #83CD20;    /* Lime Green */
+    --white: #FFFFFF;              /* White */
+    
+    /* Light Mode Colors */
     --dark-color: #1A1A1A;
-    --white: #FFFFFF;
     --light-bg: #F8F9FA;
     --card-bg: #FFFFFF;
     --text-primary: #1A1A1A;
     --text-secondary: #6B7280;
     --border-color: #E5E7EB;
-    --shadow-sm: rgba(0, 0, 0, 0.05);
+    
+    /* Shadows */
+    /* --shadow-sm: rgba(0, 0, 0, 0.05);
     --shadow-md: rgba(0, 0, 0, 0.1);
-    --shadow-lg: rgba(0, 0, 0, 0.15);
+    --shadow-lg: rgba(0, 0, 0, 0.15); */
     
     /* Typography */
     --font-primary: 'DM Sans', sans-serif;
@@ -57,8 +73,8 @@ body::before {
     --font-weight-bold: 700;
     
     /* Spacing */
-    --section-padding: 80px;
-    --container-padding: 15px;
+    --section-padding: 20px;
+    --container-padding: 4px;
     
     /* Transitions */
     --transition-fast: 0.2s ease;
@@ -71,17 +87,193 @@ body::before {
     --radius-lg: 16px;
 }
 
-/* Dark Mode Variables */
+/* ==========================================
+   DARK MODE - MINIMAL & CLEAN
+   ========================================== */
+
 [data-theme="dark"] {
-    --light-bg: #111827;
-    --card-bg: #1F2937;
-    --text-primary: #F9FAFB;
-    --text-secondary: #9CA3AF;
-    --border-color: #374151;
-    --shadow-sm: rgba(0, 0, 0, 0.3);
-    --shadow-md: rgba(0, 0, 0, 0.4);
-    --shadow-lg: rgba(0, 0, 0, 0.5);
+    /* Backgrounds - True dark with subtle layers */
+    --light-bg: #121212;           /* Pure dark background */
+    --card-bg: #1e1e1e;            /* Slightly lighter cards */
+    --dark-color: #121212;         /* Darkest shade */
+    
+    /* Text - White with hierarchy */
+    --text-primary: #FFFFFF;       /* Pure white text */
+    --text-secondary: #b0b0b0;     /* Muted gray for secondary text */
+    
+    /* Borders - Subtle gray */
+    --border-color: #2a2a2a;       /* Dark gray borders */
+    
+    /* Shadows - Deeper for dark mode */
+    --shadow-sm: rgba(0, 0, 0, 0.4);
+    --shadow-md: rgba(0, 0, 0, 0.6);
+    --shadow-lg: rgba(0, 0, 0, 0.8);
 }
+
+/* ==========================================
+   DARK MODE SPECIFIC REFINEMENTS
+   ========================================== */
+
+/* Body background */
+[data-theme="dark"] body {
+    /* background-color: var(--light-bg); */
+}
+
+/* Header */
+[data-theme="dark"] .main-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Cards with elevation */
+[data-theme="dark"] .property-card-modern,
+[data-theme="dark"] .reason-card,
+[data-theme="dark"] .blog-card,
+[data-theme="dark"] .feature-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .property-card-modern:hover,
+[data-theme="dark"] .reason-card:hover {
+    background-color: var(--card-bg);
+    border-color: var(--secondary-color);
+}
+
+/* Search bar & forms */
+[data-theme="dark"] .advanced-search-bar {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+    background-color: var(--border-color);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+    background-color: var(--border-color);
+    border-color: var(--secondary-color);
+        color: var(--text-primary);
+
+}
+
+[data-theme="dark"] .form-control::placeholder {
+        color: var(--text-primary);
+
+}
+
+/* Dropdown menu */
+[data-theme="dark"] .dropdown-menu {
+    background-color: #1e1e1e;
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+        color: var(--text-primary);
+
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+}
+
+[data-theme="dark"] .dropdown-item.active {
+    background-color: var(--primary-color);
+        color: var(--text-primary);
+
+}
+
+/* Footer */
+[data-theme="dark"] .main-footer {
+    background-color: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Filter sidebar */
+[data-theme="dark"] .filter-sidebar {
+    background-color: #1e1e1e;
+    border: 1px solid #2a2a2a;
+}
+
+/* Badges keep brand colors */
+[data-theme="dark"] .property-badge {
+    background-color: var(--primary-color);
+       color: var(--text-primary);
+
+}
+
+[data-theme="dark"] .property-badge.featured {
+    background-color: var(--secondary-color);
+        color: var(--border-color);
+
+}
+
+/* Buttons maintain brand identity */
+[data-theme="dark"] .btn-primary {
+    background-color: var(--primary-color);
+        color: var(--text-primary);
+
+    border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .btn-primary:hover {
+    /* background-color: #025a3f;
+    border-color: #025a3f; */
+}
+
+[data-theme="dark"] .btn-secondary {
+    background-color: var(--secondary-color);
+    color: #121212;
+    border-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: #6fb51a;
+    border-color: #6fb51a;
+}
+
+/* Page loader */
+[data-theme="dark"] .page-loader {
+    background-color: #121212;
+}
+
+[data-theme="dark"] .loader-logo {
+    color: #ffffff;
+}
+
+/* Stats section - keep brand gradient */
+[data-theme="dark"] .stats-section {
+    background: linear-gradient(135deg, var(--primary-color), #034833);
+}
+
+/* Social icons */
+[data-theme="dark"] .social-icon {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .social-icon:hover {
+    background-color: var(--secondary-color);
+    color: #121212;
+}
+
+/* Breadcrumb */
+[data-theme="dark"] .breadcrumb-section {
+    background-color: #1e1e1e;
+}
+
+[data-theme="dark"] .breadcrumb-item.active {
+    color: var(--secondary-color);
+}
+
+
+
+
 
 /* Reset & Base Styles */
 * {
@@ -263,15 +455,53 @@ ul {
     transition: all var(--transition-fast);
 }
 
+
+
+
+
+
+
+/* Regular nav links */
+.nav-link:not(.dropdown-toggle):hover,
+.nav-link:not(.dropdown-toggle).active {
+  color: var(--primary-color);
+}
+
+/* Dropdown toggles - subtle hover */
+.nav-link.dropdown-toggle:hover {
+  color: var(--secondary-color);
+  background-color: transparent;
+}
+
+/* Active dropdown (when open) */
+.nav-item.show .nav-link.dropdown-toggle {
+  color: var(--secondary-color);
+}
+
 .nav-link:hover,
 .nav-link.active {
     color: var(--primary-color);
-    /* background-color: rgba(3, 72, 51, 0.05); */
 }
 
-[dark-theme="dark"] .nav-link:hover,
-[data-theme="dark"] .nav-link.active {
-    color: var(--primary-color);
+/* ==========================================
+   DARK MODE NAVIGATION
+   ========================================== */
+
+/* Dark mode - Base nav link color */
+[data-theme="dark"] .nav-link {
+    color: var(--white);
+}
+
+/* Dark mode - Regular links hover & active */
+[data-theme="dark"] .nav-link:not(.dropdown-toggle):hover,
+[data-theme="dark"] .nav-link:not(.dropdown-toggle).active {
+    color: var(--secondary-color);
+}
+
+/* Dark mode - Dropdown toggles hover */
+[data-theme="dark"] .nav-link.dropdown-toggle:hover,
+[data-theme="dark"] .nav-item.show .nav-link.dropdown-toggle {
+    color: var(--secondary-color);
 }
 
 .navbar-toggler {
@@ -411,7 +641,7 @@ ul {
 
 .hero-slider-section {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
 }
 
 .hero-slide {
@@ -941,7 +1171,7 @@ ul {
 
 .stats-section {
     padding: var(--section-padding) 0;
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
     position: relative;
     overflow: hidden;
 }
@@ -1024,7 +1254,7 @@ ul {
 .reason-icon-wrapper {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, rgba(3, 72, 51, 0.1), rgba(131, 205, 32, 0.1));
+    background: linear-gradient(135deg, var(--secondary-color), #034833);
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;

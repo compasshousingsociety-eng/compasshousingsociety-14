@@ -6,7 +6,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 80px 0;
+     padding: var(--section-padding);
     /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
     position: relative;
     overflow: hidden;
@@ -244,7 +244,7 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 80px 0;
+     padding: var(--section-padding);
     /* background-color: var(--light-bg); */
 }
 
@@ -312,8 +312,8 @@
 
 .error-badge {
     display: inline-block;
-    background-color: rgba(220, 38, 38, 0.1);
-    color: #DC2626;
+    /* background-color: rgba(220, 38, 38, 0.1); */
+    /* color: #DC2626; */
     padding: 8px 20px;
     border-radius: 50px;
     font-size: 14px;

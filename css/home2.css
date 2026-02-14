@@ -4,7 +4,7 @@
 
 /* Hero Section Two */
 .hero-section-two {
-    padding: 100px 0;
+    /* padding: 100px 0; */
     /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
     position: relative;
     overflow: hidden;
@@ -207,7 +207,7 @@
 
 /* Categories Section */
 .categories-section {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     /* background-color: var(--white); */
 }
 
@@ -268,7 +268,7 @@
 .category-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -278,7 +278,7 @@
 }
 
 .category-card:hover .category-icon {
-    background: linear-gradient(135deg, var(--secondary-color), #6fb51a);
+    background: linear-gradient(135deg, var(--secondary-color), #83CD20);
     transform: rotate(10deg) scale(1.1);
 }
 
@@ -317,7 +317,7 @@
 
 /* Featured Properties Section */
 .featured-properties-section {
-    padding: 80px 0;
+     padding: var(--section-padding)
     /* background-color: var(--light-bg); */
 }
 
@@ -507,7 +507,7 @@
 
 /* Why Choose Section */
 .why-choose-section {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     /* background-color: var(--white); */
 }
 
@@ -567,7 +567,7 @@
 .feature-icon {
     width: 55px;
     height: 55px;
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
@@ -595,7 +595,7 @@
 
 /* Testimonials Section */
 .testimonials-section {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     /* background-color: var(--light-bg); */
 }
 
@@ -658,11 +658,11 @@
 
 /* CTA Section */
 .cta-section {
-    padding: 80px 0;
+    /* padding: 80px 0; */
  }
 
 .cta-box {
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
     padding: 60px 50px;
     border-radius: var(--radius-lg);
 }

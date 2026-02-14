@@ -3,7 +3,7 @@
    ========================================== */
 
 .about-content-section {
-    padding: 80px 0;
+     padding: var(--section-padding);
 }
 
 .cta-section {
@@ -108,7 +108,7 @@
 
 /* Mission & Vision Section */
 .mission-vision-section {
-    padding: 80px 0;
+     padding: var(--section-padding);
 }
 
 .mission-box {
@@ -128,7 +128,7 @@
 .mission-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
     border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@
 
 /* Values Section */
 .values-section {
-    padding: 80px 0;
+     padding: var(--section-padding);
 }
 
 
@@ -191,7 +191,7 @@
 }
 
 .value-card:hover .value-icon {
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
 }
 
 .value-icon i {
@@ -220,7 +220,7 @@
 
 /* Team Section */
 .team-section {
-    padding: 80px 0;
+     padding: var(--section-padding);
 }
 
 .team-card {
@@ -314,7 +314,7 @@
    ========================================== */
 
 .contact-info-section {
-    padding: 80px 0;
+     padding: var(--section-padding);
 }
 [data-theme="dark"] .contact-info-section p {
     color: var(--secondary-color);
@@ -343,7 +343,7 @@
 .info-icon {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -382,7 +382,7 @@
 
 /* Contact Form Section */
 .contact-form-section {
-    padding: 80px 0;
+     padding: var(--section-padding);
 }
 
 
@@ -515,19 +515,19 @@
 }
 
 .social-link.facebook i {
-    color: #1877F2;
+    /* color: #1877F2; */
 }
 
 .social-link.twitter i {
-    color: #1DA1F2;
+    /* color: #1DA1F2; */
 }
 
 .social-link.instagram i {
-    color: #E4405F;
+    /* color: #E4405F; */
 }
 
 .social-link.linkedin i {
-    color: #0A66C2;
+    /* color: #0A66C2; */
 }
 
 /* Map Section */

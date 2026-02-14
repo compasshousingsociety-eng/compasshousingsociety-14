@@ -159,7 +159,8 @@ wishlistButtons.forEach(function(button) {
         if (icon.classList.contains('fa-regular')) {
             icon.classList.remove('fa-regular');
             icon.classList.add('fa-solid');
-            this.style.backgroundColor = '#DC2626';
+            this.style.backgroundColor = '#83CD20';
+            // this.style.backgroundColor = '#DC2626';
             this.style.color = '#fff';
             
             // Show notification
@@ -277,19 +278,43 @@ if (searchForm) {
 const newsletterForms = document.querySelectorAll('.newsletter-form');
 
 newsletterForms.forEach(function(form) {
+    const emailInput = form.querySelector('input[type="email"]');
+
+    // 1. LIVE: No spaces in email while typing
+    if (emailInput) {
+        emailInput.addEventListener('input', function() {
+            this.value = this.value.replace(/\s/g, '');
+        });
+    }
+
+    // 2. VALIDATION: Form submit logic
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const emailInput = this.querySelector('input[type="email"]');
-        const email = emailInput.value;
-        
-        if (email) {
-            console.log('Newsletter subscription:', email);
-            showNotification('Successfully subscribed to newsletter!');
-            emailInput.value = '';
+        const email = emailInput.value.trim();
+        const gmailRegex = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
+
+        if (!gmailRegex.test(email)) {
+            alert('Please enter a valid Gmail address (Ex: example@gmail.com)');
+            return;
         }
+
+        // Success Path
+        console.log('Newsletter subscription:', email);
+        
+        // If you have a showNotification function defined elsewhere
+        if (typeof showNotification === "function") {
+            showNotification('Successfully subscribed to newsletter!');
+        } else {
+            alert('Successfully subscribed!');
+        }
+
+        // Reset the form
+        form.reset();
+        emailInput.value = '';
     });
 });
+
 
 /* ==========================================
    SMOOTH SCROLL TO SECTIONS
@@ -311,32 +336,103 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
 });
 
+
+
+
 /* ==========================================
-   ACTIVE NAV LINK ON SCROLL
+   ACTIVE NAV LINK BASED ON CURRENT PAGE
+   ========================================== */
+
+// Function to set active nav link based on current page
+function setActiveNavLink() {
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    
+    navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        
+        // Get the href attribute
+        const linkHref = link.getAttribute('href');
+        
+        // Check if this link matches current page
+        if (linkHref === currentPage || 
+            (currentPage === '' && linkHref === 'index.html') ||
+            (currentPage === 'index.html' && linkHref === 'index.html')) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Set active link on page load
+setActiveNavLink();
+
+/* ==========================================
+   ACTIVE NAV LINK ON SCROLL (For single-page sections)
    ========================================== */
 
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
 
 window.addEventListener('scroll', function() {
+    // Only run this if we have sections with IDs on the page
+    if (sections.length === 0) return;
+    
     let current = '';
     
     sections.forEach(function(section) {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
-        
         if (window.pageYOffset >= sectionTop - 100) {
             current = section.getAttribute('id');
         }
     });
     
-    navLinks.forEach(function(link) {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === '#' + current) {
-            link.classList.add('active');
-        }
-    });
+    // Only update active state if we found a matching section
+    if (current) {
+        navLinks.forEach(function(link) {
+            const linkHref = link.getAttribute('href');
+            
+            // Only change active state for anchor links (starting with #)
+            if (linkHref.startsWith('#')) {
+                link.classList.remove('active');
+                if (linkHref === '#' + current) {
+                    link.classList.add('active');
+                }
+            }
+        });
+    }
 });
+
+
+
+
+
+/* ==========================================
+   ACTIVE NAV LINK ON SCROLL
+   ========================================== */
+
+// const sections = document.querySelectorAll('section[id]');
+// const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+
+// window.addEventListener('scroll', function() {
+//     let current = '';
+    
+//     sections.forEach(function(section) {
+//         const sectionTop = section.offsetTop;
+//         const sectionHeight = section.clientHeight;
+        
+//         if (window.pageYOffset >= sectionTop - 100) {
+//             current = section.getAttribute('id');
+//         }
+//     });
+    
+//     navLinks.forEach(function(link) {
+//         link.classList.remove('active');
+//         if (link.getAttribute('href') === '#' + current) {
+//             link.classList.add('active');
+//         }
+//     });
+// });
 
 /* ==========================================
    MOBILE MENU CLOSE ON LINK CLICK
@@ -401,11 +497,13 @@ forms.forEach(function(form) {
         // Real-time validation feedback
         input.addEventListener('blur', function() {
             if (this.hasAttribute('required') && !this.value) {
-                this.style.borderColor = '#DC2626';
+                this.style.borderColor = '#83CD20';
+                // this.style.borderColor = '#DC2626';
             } else if (this.type === 'email' && this.value) {
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(this.value)) {
-                    this.style.borderColor = '#DC2626';
+                    this.style.borderColor = '#83CD20';
+                    // this.style.borderColor = '#DC2626';
                 } else {
                     this.style.borderColor = 'var(--border-color)';
                 }
@@ -556,9 +654,9 @@ if (featureSection) {
    CONSOLE INFO
    ========================================== */
 
-console.log('%c Compass Housing Society Website ', 'background: #034833; color: #83CD20; font-size: 20px; font-weight: bold; padding: 10px;');
-console.log('%c Developed by ohm using DM Sans font family ', 'background: #83CD20; color: #1A1A1A; font-size: 14px; padding: 5px;');
-console.log('%c Theme: Dark/Light Mode Supported ', 'color: #034833; font-size: 12px;');
+// console.log('%c Compass Housing Society Website ', 'background: #034833; color: #83CD20; font-size: 20px; font-weight: bold; padding: 10px;');
+// console.log('%c Developed by ohm using DM Sans font family ', 'background: #83CD20; color: #1A1A1A; font-size: 14px; padding: 5px;');
+// console.log('%c Theme: Dark/Light Mode Supported ', 'color: #034833; font-size: 12px;');
 
 /* ==========================================
    PERFORMANCE MONITORING
@@ -581,3 +679,99 @@ document.querySelectorAll('img').forEach(function(img) {
     });
 });
 */
+
+
+// Mortgage Calculator
+function calculateMortgage() {
+    const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+    const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+    const loanPeriod = parseFloat(document.getElementById('loanPeriod').value) * 12;
+    
+    const monthlyPayment = (loanAmount * interestRate * Math.pow(1 + interestRate, loanPeriod)) / 
+                          (Math.pow(1 + interestRate, loanPeriod) - 1);
+    
+    document.getElementById('monthlyPayment').textContent = '₹' + monthlyPayment.toFixed(2);
+    document.getElementById('mortgageResult').style.display = 'block';
+}
+
+
+//service-details filter logic
+document.addEventListener('DOMContentLoaded', () => {
+    const applyBtn = document.getElementById('applyFilters');
+    const resetBtn = document.getElementById('resetFilters');
+    const cards = document.querySelectorAll('.property-card');
+
+    // --- APPLY FILTERS ---
+    applyBtn.addEventListener('click', () => {
+        // 1. Get current values from the sidebar
+        const keyword = document.getElementById('searchKeyword').value.toLowerCase();
+        const type = document.getElementById('propertyType').value;
+        const listing = document.querySelector('input[name="listingType"]:checked').value;
+        const priceRange = document.getElementById('priceRange').value;
+        
+        // Get selected checkboxes (Bedrooms)
+        const selectedBeds = Array.from(document.querySelectorAll('.checkbox-group input[type="checkbox"]:checked')).map(cb => parseInt(cb.value));
+
+        cards.forEach(card => {
+            let isVisible = true;
+
+            // Data from the card
+            const cardTitle = card.querySelector('.property-title').innerText.toLowerCase();
+            const cardType = card.getAttribute('data-type');
+            const cardListing = card.getAttribute('data-listing');
+            const cardPrice = parseInt(card.getAttribute('data-price'));
+            const cardBeds = parseInt(card.getAttribute('data-beds'));
+
+            // Keyword Search
+            if (keyword && !cardTitle.includes(keyword)) isVisible = false;
+
+            // Property Type
+            if (type && cardType !== type) isVisible = false;
+
+            // Listing Type (Sale vs Rent)
+            if (listing !== 'all' && cardListing !== listing) isVisible = false;
+
+            // Price Range Logic
+            if (priceRange) {
+                const [min, max] = priceRange.split('-').map(Number);
+                if (max) { // Handle "0-100000" style
+                    if (cardPrice < min || cardPrice > max) isVisible = false;
+                } else { // Handle "1000000+" style
+                    if (cardPrice < 1000000) isVisible = false;
+                }
+            }
+
+            // Bedrooms (Check if card beds is >= any selected checkbox)
+            if (selectedBeds.length > 0) {
+                const minBedsRequired = Math.min(...selectedBeds);
+                if (cardBeds < minBedsRequired) isVisible = false;
+            }
+
+            // Final Execution: Show or Hide
+            card.style.display = isVisible ? "block" : "none";
+        });
+        
+        updateResultCount();
+    });
+
+    // --- RESET ALL ---
+    resetBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Clear all inputs
+        document.getElementById('searchKeyword').value = '';
+        document.getElementById('propertyType').value = '';
+        document.getElementById('priceRange').value = '';
+        document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+        document.querySelector('input[value="all"]').checked = true;
+        
+        // Show all cards
+        cards.forEach(card => card.style.display = "block");
+        updateResultCount();
+    });
+
+    function updateResultCount() {
+        const visibleCount = document.querySelectorAll('.property-card[style="display: block"]').length;
+        const total = cards.length;
+        document.querySelector('.result-count').innerHTML = `Showing <strong>${visibleCount}</strong> of <strong>${total}</strong> properties`;
+    }
+});

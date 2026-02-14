@@ -4,7 +4,7 @@
 
 /* Blog Section */
 .blog-section {
-    padding: 60px 0 80px;
+     padding: var(--section-padding)
 }
 
 /* Featured Post */
@@ -397,7 +397,7 @@
 
 /* Newsletter Widget */
 .newsletter-widget {
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
+    background: linear-gradient(135deg, var(--primary-color), #034833);
     color: var(--white);
 }
 

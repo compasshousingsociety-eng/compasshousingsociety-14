@@ -66,7 +66,7 @@
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="services.html">All Services</a></li>
-                            <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
+                            <li><a class="dropdown-item active" href="service-details.html">Service Details</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
@@ -145,7 +145,7 @@
         </div>
     </div>
 </section> -->
-
+<br/>
 <!-- Property Details -->
 <section class="property-details-section">
     <div class="container">
@@ -200,7 +200,7 @@
                 <!-- Description -->
                 <div class="content-block">
                     <h2 class="block-title">Description</h2>
-                    <p>This stunning modern family villa offers the perfect blend of luxury and comfort. Located in a prime Brooklyn neighborhood, this property features spacious rooms, contemporary design, and high-end finishes throughout.</p>
+                    <p>This stunning modern family villa offers the perfect blend of luxury and comfort. Located in a prime Brooklyn neighborhood, this property features spacious rooms, contemporary design and high-end finishes throughout.</p>
                     <p>The open-concept living area seamlessly connects to the gourmet kitchen, creating an ideal space for family gatherings and entertaining. Large windows flood the home with natural light and offer beautiful views of the surrounding area.</p>
                     <p>The master suite is a true retreat, complete with a walk-in closet and spa-like bathroom featuring dual vanities and a soaking tub. Four additional bedrooms provide plenty of space for family and guests.</p>
                 </div>
@@ -300,21 +300,21 @@
                 <!-- Calculator -->
                 <div class="sidebar-card">
                     <h3 class="card-title">Mortgage Calculator</h3>
-                    <form id="mortgageForm">
+                    <form id="mortgageCalculator">
                         <div class="form-group">
                             <label>Loan Amount</label>
-                            <input type="number" class="form-control" value="425000" id="loanAmount">
+                            <input type="number" class="form-control" value="425000" min="0" id="loanAmount" required>
                         </div>
                         <div class="form-group">
                             <label>Interest Rate (%)</label>
-                            <input type="number" class="form-control" value="6.5" step="0.1" id="interestRate">
+                            <input type="number" class="form-control" value="6.5" step="0.1" min="0" id="interestRate" required>
                         </div>
                         <div class="form-group">
                             <label>Loan Period (Years)</label>
-                            <input type="number" class="form-control" value="30" id="loanPeriod">
+                            <input type="number" class="form-control" value="30" id="loanPeriod" min="0" required>
                         </div>
                         <button type="button" class="btn btn-success w-100" onclick="calculateMortgage()">Calculate</button>
-                        <div class="result-box" id="result" style="display: none;">
+                        <div class="result-box" id="mortgageResult" style="display: none;">
                             <p>Monthly Payment:</p>
                             <h3 id="monthlyPayment">₹0</h3>
                         </div>
@@ -323,22 +323,34 @@
 
                 <!-- Share -->
                 <div class="sidebar-card">
-                    <h3 class="card-title">Share Property</h3>
-                    <div class="share-buttons">
-                        <button class="share-btn facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </button>
-                        <button class="share-btn twitter">
-                            <i class="fa-brands fa-twitter"></i>
-                        </button>
-                        <button class="share-btn linkedin">
-                            <i class="fa-brands fa-linkedin-in"></i>
-                        </button>
-                        <button class="share-btn whatsapp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </button>
-                    </div>
-                </div>
+    <h3 class="card-title">Share Property</h3>
+    <div class="share-buttons">
+        <!-- Facebook -->
+        <button class="share-btn facebook" 
+                onclick="window.location.href ='https://www.facebook.com/login.php/'">
+            <i class="fa-brands fa-facebook-f"></i>
+        </button>
+
+        <!-- Twitter (X) -->
+        <button class="share-btn twitter" 
+                onclick="window.location.href ='https://x.com/i/flow/login'">
+            <i class="fa-brands fa-twitter"></i>
+        </button>
+
+        <!-- LinkedIn -->
+        <button class="share-btn linkedin" 
+                onclick="window.location.href ='https://www.linkedin.com/login?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin'">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </button>
+
+        <!-- WhatsApp -->
+        <button class="share-btn whatsapp" 
+                onclick="window.location.href ='https://web.whatsapp.com/'">
+            <i class="fa-brands fa-whatsapp"></i>
+        </button>
+    </div>
+</div>
+
 
                 <!-- Similar Properties -->
                 <div class="sidebar-card">

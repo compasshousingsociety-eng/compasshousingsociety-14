@@ -65,7 +65,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item active" href="services.html">All Services</a></li>
                             <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
                         </ul>
                     </li>
@@ -139,8 +139,8 @@
                     <!-- Property Type -->
                     <div class="filter-group">
                         <label class="filter-label">Property Type</label>
-                        <select class="form-select" id="propertyType">
-                            <option value="">All Types</option>
+                        <select class="form-select" id="propertyType" required>
+                            <option value="" selected>All Types</option>
                             <option value="house">House</option>
                             <option value="apartment">Apartment</option>
                             <option value="villa">Villa</option>
@@ -154,11 +154,11 @@
                         <label class="filter-label">Listing Type</label>
                         <div class="radio-group">
                             <label class="radio-option">
-                                <input type="radio" name="listingType" value="all" checked>
+                                <input type="radio" name="listingType" value="all">
                                 <span>All</span>
                             </label>
                             <label class="radio-option">
-                                <input type="radio" name="listingType" value="sale">
+                                <input type="radio" name="listingType" value="sale" checked>
                                 <span>For Sale</span>
                             </label>
                             <label class="radio-option">
@@ -174,7 +174,7 @@
                         <select class="form-select" id="priceRange">
                             <option value="">Any Price</option>
                             <option value="0-100000">₹0 - ₹100,000</option>
-                            <option value="100000-300000">₹100,000 - ₹300,000</option>
+                            <option value="100000-300000" selected>₹100,000 - ₹300,000</option>
                             <option value="300000-500000">₹300,000 - ₹500,000</option>
                             <option value="500000-1000000">₹500,000 - ₹1,000,000</option>
                             <option value="1000000+">₹1,000,000+</option>
@@ -194,7 +194,7 @@
                                 <span>2+</span>
                             </label>
                             <label class="checkbox-option">
-                                <input type="checkbox" value="3">
+                                <input type="checkbox" value="3" checked>
                                 <span>3+</span>
                             </label>
                             <label class="checkbox-option">
@@ -217,7 +217,7 @@
                                 <span>1+</span>
                             </label>
                             <label class="checkbox-option">
-                                <input type="checkbox" value="2">
+                                <input type="checkbox" value="2" checked>
                                 <span>2+</span>
                             </label>
                             <label class="checkbox-option">
@@ -235,9 +235,9 @@
                     <div class="filter-group">
                         <label class="filter-label">Area (sqft)</label>
                         <div class="range-inputs">
-                            <input type="number" class="form-control" placeholder="Min" id="minArea">
+                            <input type="number" class="form-control" placeholder="Min" id="minArea" value="0" required>
                             <span>-</span>
-                            <input type="number" class="form-control" placeholder="Max" id="maxArea">
+                            <input type="number" class="form-control" placeholder="Max" id="maxArea" value="130000" required>
                         </div>
                     </div>
                     
@@ -253,7 +253,7 @@
                     <div class="toolbar-left">
                         <p class="result-count">Showing <strong>24</strong> of <strong>156</strong> properties</p>
                     </div>
-                    <div class="toolbar-right">
+                    <!-- <div class="toolbar-right">
                         <label>Sort by:</label>
                         <select class="form-select" id="sortBy">
                             <option value="newest">Newest First</option>
@@ -269,13 +269,13 @@
                                 <i class="fa-solid fa-list"></i>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <!-- Properties Grid -->
                 <div class="properties-grid" id="propertiesGrid">
                     <!-- Property Card 1 -->
-                    <div class="property-card">
+                    <div class="property-card"  data-type="villa" data-listing="sale" data-price="425000" data-beds="5" data-baths="3" data-area="2800">
                         <div class="property-image">
                             <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=350&fit=crop" alt="Property">
                             <div class="property-badge sale">For Sale</div>
@@ -305,7 +305,7 @@
                     </div>
                     
                     <!-- Property Card 2 -->
-                    <div class="property-card">
+                    <div class="property-card" data-type="apartment" data-listing="rent" data-price="150000" data-beds="1" data-baths="2" data-area="1200">
                         <div class="property-image">
                             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&h=350&fit=crop" alt="Property">
                             <div class="property-badge rent">For Rent</div>
@@ -335,7 +335,7 @@
                     </div>
                     
                     <!-- Property Card 3 -->
-                    <div class="property-card">
+                    <div class="property-card" data-type="House" data-listing="sale" data-price="550000" data-beds="2" data-baths="1" data-area="1200">
                         <div class="property-image">
                             <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&h=350&fit=crop" alt="Property">
                             <div class="property-badge sale">For Sale</div>
@@ -365,7 +365,7 @@
                     </div>
                     
                     <!-- Property Card 4 -->
-                    <div class="property-card">
+                    <div class="property-card"  data-type="Commercial" data-listing="rent" data-price="650000" data-beds="3" data-baths="4" data-area="1200">
                         <div class="property-image">
                             <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=500&h=350&fit=crop" alt="Property">
                             <div class="property-badge rent">For Rent</div>
@@ -395,7 +395,7 @@
                     </div>
                     
                     <!-- Property Card 5 -->
-                    <div class="property-card">
+                    <div class="property-card" data-type="Land" data-listing="sale" data-price="130000" data-beds="4" data-baths="5" data-area="1200">
                         <div class="property-image">
                             <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=500&h=350&fit=crop" alt="Property">
                             <div class="property-badge sale">For Sale</div>
@@ -425,7 +425,7 @@
                     </div>
                     
                     <!-- Property Card 6 -->
-                    <div class="property-card">
+                    <div class="property-card" data-type="apartment" data-listing="rent" data-price="850000" data-beds="2" data-baths="2" data-area="1200">
                         <div class="property-image">
                             <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=500&h=350&fit=crop" alt="Property">
                             <div class="property-badge rent">For Rent</div>

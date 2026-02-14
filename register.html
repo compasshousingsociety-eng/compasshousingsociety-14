@@ -27,12 +27,12 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+             padding: var(--section-padding);
+            /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
         }
 
         [data-theme="dark"] .simple-auth-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            /* background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); */
         }
 
         .simple-auth-card {
@@ -509,7 +509,7 @@
                                     <input type="password" id="password" class="form-control"
                                         placeholder="Enter password" required minlength="8"
                                         pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
-                                        title="Password must be at least 8 characters with uppercase, lowercase, and number">
+                                        title="Password must be at least 8 characters with uppercase, lowercase and number">
                                     <button type="button" class="toggle-password" onclick="togglePassword('password')">
                                         <i class="fa-solid fa-eye"></i>
                                     </button>

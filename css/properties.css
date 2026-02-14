@@ -4,8 +4,8 @@
 
 /* Page Header */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-color), #025a3f);
-    padding: 80px 0 60px;
+    background: var(--primary-color);
+    padding: var(--section-padding);
     position: relative;
     overflow: hidden;
 }
@@ -66,7 +66,7 @@
 
 /* Properties Section */
 .properties-section {
-    padding: 60px 0;
+     padding: var(--section-padding)
 }
 
 /* Filter Sidebar */
@@ -170,7 +170,7 @@ select option:checked, select option:hover {
 }
 
 .radio-option:hover {
-    background-color: rgba(3, 72, 51, 0.05);
+    /* background-color: rgba(3, 72, 51, 0.05); */
 }
 
 .radio-option input[type="radio"] {
