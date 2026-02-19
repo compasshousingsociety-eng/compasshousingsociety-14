@@ -20,7 +20,7 @@
 
 .hero-badge {
     display: inline-block;
-    background-color: rgba(131, 205, 32, 0.15);
+    /* background-color: rgba(131, 205, 32, 0.15); */
     color: var(--primary-color);
     padding: 8px 20px;
     border-radius: 50px;
@@ -383,7 +383,7 @@
 }
 
 .label-rent {
-    background-color: #f59e0b;
+    background-color: var(--secondary-color);
     color: var(--white);
 }
 
