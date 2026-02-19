@@ -19,7 +19,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link rel="stylesheet" href="css/auth.css"> -->
+    <link rel="stylesheet" href="css/auth.css">
     <link rel="stylesheet" href="css/form-validation.css">
     <style>
         /* Simple Auth Section */
@@ -27,7 +27,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: var(--section-padding);
+             padding: var(--section-padding);
             /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
         }
 
@@ -45,6 +45,8 @@
         }
 
         .auth-header {
+            background-color: var(--card-bg);
+            padding: 20px 30px;
             text-align: center;
             margin-bottom: 35px;
         }
@@ -154,6 +156,8 @@
 
         /* Form Styles */
         .form-group {
+            background-color: var(--card-bg);
+            padding: 20px 30px;
             margin-bottom: 20px;
         }
 
@@ -195,7 +199,7 @@
             background-color: var(--card-bg);
         }
 
-
+        
 
         .toggle-password:hover {
             color: var(--primary-color);
@@ -297,9 +301,9 @@
         /* Auth Footer */
         .auth-footer {
             text-align: center;
-            padding-top: 20px;
+            /* padding-top: 20px; */
             border-top: 1px solid var(--border-color);
-            margin-top: 25px;
+            /* margin-top: 25px; */
         }
 
         .auth-footer p {
@@ -409,8 +413,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Account</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="login.html">Login</a></li>
-                                <li><a class="dropdown-item active" href="register.html">Register</a></li>
+                                <li><a class="dropdown-item" href="login.html"><i
+                                            class="fa-solid fa-right-to-bracket me-2"></i>Login</a></li>
+                                <li><a class="dropdown-item active" href="register.html"><i
+                                            class="fa-solid fa-user-plus me-2"></i>Register</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -430,8 +436,7 @@
                     <div class="simple-auth-card">
                         <div class="auth-header">
                             <a href="index.html" class="auth-logo">
-                                <span class="brand-name">Compass<span class="brand-accent"> Housing
-                                        Society</span></span>
+                                <span class="brand-name">Compass<span class="brand-accent"> Housing Society</span></span>
                             </a>
                             <h1 class="auth-title">Create Account</h1>
                             <p class="auth-subtitle">Sign up to start your property journey</p>
@@ -449,9 +454,9 @@
                             </button>
                         </div> -->
 
-                        <div class="divider">
+                        <!-- <div class="divider">
                             <span>or sign up with email</span>
-                        </div>
+                        </div> -->
 
                         <form class="auth-form" id="registerForm">
                             <div class="row g-3">
@@ -461,7 +466,8 @@
                                         <div class="input-with-icon">
                                             <i class="fa-solid fa-user"></i>
                                             <input type="text" id="firstName" name="firstName" class="form-control"
-                                                placeholder="First name" required pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
+                                                placeholder="First name" required
+                                                pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
                                                 title="Only letters allowed. No spaces at start or end.">
                                         </div>
                                         <div class="invalid-feedback">
@@ -475,7 +481,8 @@
                                         <div class="input-with-icon">
                                             <i class="fa-solid fa-user"></i>
                                             <input type="text" id="lastName" name="lastName" class="form-control"
-                                                placeholder="Last name" required pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
+                                                placeholder="Last name" required
+                                                pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
                                                 title="Only letters allowed. No spaces at start or end.">
                                         </div>
                                         <div class="invalid-feedback">
@@ -633,7 +640,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="successMessage" class="text-dark"></p>
+                    <p class="text-dark" id="successMessage"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" id="continueBtn">
