@@ -10,7 +10,7 @@ body::before {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            opacity: 0.1;
+            opacity: 0.5;
             z-index: -1;
             pointer-events: none;
         }
@@ -46,7 +46,7 @@ body::before {
 
 :root {
     /* ✅ Core 3-Color Brand Palette */
-    --primary-color: #034833;      /* Dark Green */
+    --primary-color: #0d8f68;      /* Dark Green */
     --secondary-color: #83CD20;    /* Lime Green */
     --white: #FFFFFF;              /* White */
     
@@ -64,7 +64,7 @@ body::before {
     --shadow-lg: rgba(0, 0, 0, 0.15); */
     
     /* Typography */
-    --font-primary: 'DM Sans', sans-serif;
+    --font-primary: 'DM Sans';
     --font-size-base: 16px;
     --font-weight-light: 300;
     --font-weight-normal: 400;
@@ -502,6 +502,11 @@ ul {
 [data-theme="dark"] .nav-link.dropdown-toggle:hover,
 [data-theme="dark"] .nav-item.show .nav-link.dropdown-toggle {
     color: var(--secondary-color);
+}
+
+[data-theme="dark"] .navbar-nav .nav-link.show
+ {
+    color: var(--text-primary);
 }
 
 .navbar-toggler {

@@ -19,7 +19,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/auth.css">
+    <!-- <link rel="stylesheet" href="css/auth.css"> -->
     <link rel="stylesheet" href="css/form-validation.css">
     <style>
         /* Simple Auth Section */
@@ -27,7 +27,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-             padding: var(--section-padding);
+            padding: var(--section-padding);
             /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
         }
 
@@ -36,7 +36,7 @@
         }
 
         .simple-auth-card {
-            background-color: var(--card-bg);
+            /* background-color: var(--card-bg); */
             border-radius: var(--radius-lg);
             box-shadow: 0 10px 40px var(--shadow-md);
             padding: 50px 45px;
@@ -195,7 +195,7 @@
             background-color: var(--card-bg);
         }
 
-        
+
 
         .toggle-password:hover {
             color: var(--primary-color);
@@ -432,7 +432,8 @@
                     <div class="simple-auth-card">
                         <div class="auth-header">
                             <a href="index.html" class="auth-logo">
-                                <span class="brand-name">Compass<span class="brand-accent"> Housing Society</span></span>
+                                <span class="brand-name">Compass<span class="brand-accent"> Housing
+                                        Society</span></span>
                             </a>
                             <h1 class="auth-title">Create Account</h1>
                             <p class="auth-subtitle">Sign up to start your property journey</p>
@@ -462,8 +463,7 @@
                                         <div class="input-with-icon">
                                             <i class="fa-solid fa-user"></i>
                                             <input type="text" id="firstName" name="firstName" class="form-control"
-                                                placeholder="First name" required
-                                                pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
+                                                placeholder="First name" required pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
                                                 title="Only letters allowed. No spaces at start or end.">
                                         </div>
                                         <div class="invalid-feedback">
@@ -477,8 +477,7 @@
                                         <div class="input-with-icon">
                                             <i class="fa-solid fa-user"></i>
                                             <input type="text" id="lastName" name="lastName" class="form-control"
-                                                placeholder="Last name" required
-                                                pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
+                                                placeholder="Last name" required pattern="^[A-Za-z]+(?:\s[A-Za-z]+)*$"
                                                 title="Only letters allowed. No spaces at start or end.">
                                         </div>
                                         <div class="invalid-feedback">
@@ -552,7 +551,7 @@
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-success w-100 btn-lg">
+                            <button type="submit" class="btn btn-success">
                                 Create Account
                             </button>
 
@@ -636,7 +635,7 @@
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="successMessage"></p>
+                    <p id="successMessage" class="text-dark"></p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" id="continueBtn">

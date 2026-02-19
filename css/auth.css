@@ -2,6 +2,20 @@
    AUTH PAGES (LOGIN & REGISTER)
    ========================================== */
 
+
+.auth-hero {
+    background-image: url('../images/compasshousingsociety.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.auth-page body::before {
+    display: none;
+}
+
+
+
 .auth-section {
     min-height: 100vh;
     display: flex;
@@ -16,7 +30,7 @@
 .auth-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: var(--card-bg);
+    /* background-color: var(--card-bg); */
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: 0 10px 40px var(--shadow-md);
@@ -258,7 +272,7 @@
 
 .toggle-password {
     position: absolute;
-    right: 26px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     background: none;

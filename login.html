@@ -64,12 +64,12 @@
                             <a class="nav-link" href="about.html">AboutUs</a>
                         </li>
                         <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
-                            <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
-                        </ul>
-                    </li>
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                                <li><a class="dropdown-item" href="service-details.html">Service Details</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Blogs</a>
                             <ul class="dropdown-menu">
@@ -131,15 +131,15 @@
                                     </div>
                                 </div>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=800&fit=crop"
-                                alt="Login">
+                            <!-- <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=800&fit=crop"
+                                alt="Login"> -->
                         </div>
 
                         <!-- Right Side - Form -->
                         <div class="auth-form-container">
                             <div class="auth-header">
                                 <a href="index.html" class="auth-logo">
-                                    <span class="brand-name">Compass<span class="brand-accent">Housing
+                                    <span class="brand-name">Compass <span class="brand-accent">Housing
                                             Society</span></span>
                                 </a>
                                 <h1 class="auth-title">Sign In</h1>
@@ -164,61 +164,58 @@
                                 <span>or sign in with email</span>
                             </div>
 
-                            <form class="auth-form" id="loginForm" novalidate>
-    <div class="form-group">
-        <label for="email">Email Address *</label>
-        <div class="input-with-icon">
-            <i class="fa-solid fa-envelope"></i>
-            <input 
-                type="email" 
-                id="email" 
-                class="form-control"
-                placeholder="Enter your email" 
-                required
-                pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$"
-                title="Enter a valid email address with no spaces"
-            >
-        </div>
-        <div class="invalid-feedback">
-            Please enter a valid email address with no spaces.
-        </div>
-    </div>
+                            <form class="auth-form" id="loginForm">
+                                <div class="form-group">
+                                    <label for="loginEmail">Email Address *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <input
+                                    type="email"
+                                    id="loginEmail"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="you@gmail.com"
+                                    required
+                                />
+                                    </div>
+                                    
+                                </div>
 
-    <div class="form-group">
-        <label for="password">Password *</label>
-        <div class="input-with-icon">
-            <i class="fa-solid fa-lock"></i>
-            <input 
-                type="password" 
-                id="password" 
-                class="form-control"
-                placeholder="Enter your password" 
-                required
-                minlength="6"
-                maxlength="8"
-            >
-            <button type="button" class="toggle-password"
-                onclick="togglePassword('password')">
-                <i class="fa-solid fa-eye"></i>
-            </button>
-        </div>
-        <div class="invalid-feedback">
-            Please enter your password (minimum 6 characters).
-        </div>
-    </div>
+                                <div class="form-group">
+                                    <label for="loginPassword">Password *</label>
+                                    <div class="input-with-icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                         <input
+                                    type="password"
+                                    id="loginPassword"
+                                    name="password"
+                                    class="form-control"
+                                    placeholder="Enter your password"
+                                    required
+                                    minlength="8"
+                                />
+                                        <button type="button" class="toggle-password"
+                                            onclick="togglePassword('loginPassword')">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Please enter your password (maximum 8 characters).
+                                    </div>
+                                </div>
 
-    <!-- <div class="form-options">
-        <label class="checkbox-label">
-            <input type="checkbox" id="remember">
-            <span>Remember me</span>
-        </label>
-        <a href="#" class="forgot-link">Forgot Password?</a>
-    </div> -->
+                                <div class="form-options">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" id="remember">
+                                        <span>Remember me</span>
+                                    </label>
+                                    <!-- <a href="#" class="forgot-link">Forgot Password?</a> -->
+                                </div>
 
-    <button type="submit" class="btn btn-success">
-        Sign In
-    </button>
-</form>
+                                <button type="submit" class="btn btn-success">
+                                    Sign In
+                                </button>
+                            </form>
 
 
                             <div class="auth-footer">
@@ -303,62 +300,117 @@
     <script src="js/main.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/form-validation.js"></script>
+   <!-- LOGIN PAGE SPECIFIC VALIDATION (Gmail only) -->
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-
-    const loginForm = document.getElementById('loginForm');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-
-    /* =======================
-       EMAIL – NO SPACES
-    ======================= */
-    email.addEventListener('input', function () {
-        this.value = this.value.replace(/\s/g, '');
-    });
-
-    /* =======================
-       PASSWORD – NO SPACES
-    ======================= */
-    password.addEventListener('input', function () {
-        this.value = this.value.replace(/\s/g, '');
-    });
-
-    /* =======================
-       FORM SUBMIT
-    ======================= */
-    loginForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const gmailRegex = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
-
-        // Final validation
-        if (!gmailRegex.test(email.value)) {
-            email.classList.add('is-invalid');
-            return;
-        } else {
-            email.classList.remove('is-invalid');
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginForm = document.getElementById('loginForm');
+        
+        if (loginForm) {
+            const emailInput = document.getElementById('loginEmail');
+            const passwordInput = document.getElementById('loginPassword');
+            
+            // Email validation - ONLY @gmail.com allowed
+            function validateEmail() {
+                if (emailInput.value.trim() === '') {
+                    emailInput.style.borderColor = 'var(--border-color)';
+                    return false;
+                }
+                
+                // STRICT: Only accept @gmail.com emails
+                const gmailPattern = /^[^\s@]+@gmail\.com$/i;
+                if (!gmailPattern.test(emailInput.value)) {
+                    emailInput.style.borderColor = '#DC2626';
+                    return false;
+                }
+                
+                emailInput.style.borderColor = 'var(--primary-color)';
+                return true;
+            }
+            
+            // Password validation (min 8 chars)
+            function validatePassword() {
+                if (passwordInput.value.trim() === '') {
+                    passwordInput.style.borderColor = 'var(--border-color)';
+                    return false;
+                }
+                
+                if (passwordInput.value.length < 8) {
+                    passwordInput.style.borderColor = '#DC2626';
+                    return false;
+                }
+                
+                passwordInput.style.borderColor = 'var(--primary-color)';
+                return true;
+            }
+            
+            // Real-time validation
+            emailInput.addEventListener('input', validateEmail);
+            emailInput.addEventListener('blur', validateEmail);
+            
+            passwordInput.addEventListener('input', validatePassword);
+            passwordInput.addEventListener('blur', validatePassword);
+            
+            // Form submit validation
+            loginForm.addEventListener('submit', function(e) {
+                let isValid = true;
+                
+                if (!validateEmail()) {
+                    isValid = false;
+                }
+                
+                if (!validatePassword()) {
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    e.preventDefault();
+                    
+                    // Remove previous errors
+                    const existingError = loginForm.querySelector('.alert');
+                    if (existingError) existingError.remove();
+                    
+                    // Show new error
+                    const errorDiv = document.createElement('div');
+                    errorDiv.className = 'alert alert-danger mt-3';
+                    errorDiv.innerHTML = `
+                        <i class="fa-solid fa-exclamation-triangle me-2"></i>
+                        <strong>Error:</strong> Please enter a valid <strong>Gmail address</strong> (must end with @gmail.com) and password (minimum 8 characters).
+                    `;
+                    
+                    const submitBtn = loginForm.querySelector('button[type="submit"]');
+                    loginForm.insertBefore(errorDiv, submitBtn);
+                    
+                    // Auto remove after 6 seconds
+                    setTimeout(() => {
+                        errorDiv.remove();
+                    }, 6000);
+                } else {
+                    // ✅ VALIDATION SUCCESS - Show success + redirect
+                const successDiv = document.createElement('div');
+                successDiv.className = 'alert alert-success mt-3';
+                successDiv.innerHTML = `
+                    <i class="fa-solid fa-check-circle me-2"></i>
+                    <strong>Login Successful!</strong> Redirecting to dashboard...
+                `;
+                
+                const submitBtn = loginForm.querySelector('button[type="submit"]');
+                loginForm.insertBefore(successDiv, submitBtn);
+                
+                // Disable submit button to prevent double-click
+                const submitButton = loginForm.querySelector('button[type="submit"]');
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Redirecting...';
+                
+                // Redirect after 2 seconds
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+                }
+                
+            });
         }
-
-        if (password.value.length < 6) {
-            password.classList.add('is-invalid');
-            return;
-        } else {
-            password.classList.remove('is-invalid');
-        }
-
-        // OPTIONAL: Remember me
-        if (document.getElementById('remember').checked) {
-            localStorage.setItem('rememberedEmail', email.value);
-        }
-
-        // SUCCESS (simple version)
-        alert('Login successful 🎉');
-        window.location.href = 'index.html';
     });
-
-});
-</script>
+    </script>
 
 
 
