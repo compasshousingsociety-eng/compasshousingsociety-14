@@ -315,7 +315,7 @@
                 }
                 
                 // STRICT: Only accept @gmail.com emails
-                const gmailPattern = /^[^\s@]+@gmail\.com$/i;
+                const gmailPattern =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/i;
                 if (!gmailPattern.test(emailInput.value)) {
                     emailInput.style.borderColor = '#DC2626';
                     return false;
