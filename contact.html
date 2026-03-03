@@ -204,7 +204,7 @@
     class="form-control" 
     placeholder="Enter your email" 
     required
-    pattern="^[A-Za-z0-9._%+-]+@gmail\.com$"
+    pattern=" /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/i"
     title="Enter a valid Gmail address (example@gmail.com)"
 >
 
@@ -444,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
-        const gmailRegex = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
+        const gmailRegex =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/i;
 
         // Name validation
         if (!nameRegex.test(name.value)) {
