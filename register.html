@@ -498,7 +498,7 @@
                                     <i class="fa-solid fa-envelope"></i>
                                     <input type="email" id="email" name="email" class="form-control"
                                         placeholder="Ex: JohnDoe214@gmail.com" required
-                                        pattern="^[A-Za-z0-9._%+-]+@gmail\.com$"
+                                        pattern=" /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/i"
                                         title="Enter a valid Gmail address with no spaces">
                                 </div>
                                 <div class="invalid-feedback">
@@ -762,7 +762,7 @@
                 e.preventDefault();
 
                 const nameRegex = /^[A-Za-z]+( [A-Za-z]+)*$/;
-                const emailRegex = /^[A-Za-z0-9._%+-]+@gmail\.com$/;
+                const emailRegex =  /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|in|org|net)$/i;
                 const termsCheckbox = document.getElementById('terms');
 
                 if (!nameRegex.test(firstName.value.trim())) {
